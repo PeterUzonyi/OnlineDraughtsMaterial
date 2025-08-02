@@ -40,8 +40,8 @@
     function onDragStart(source, piece, position, orientation) {
       if (game.gameOver()) return false;
       var turn = game.turn();
-      if ((turn === 'w' && piece[0] !== 'w') ||
-        (turn === 'b' && piece[0] !== 'b'))
+      if ((turn === 'w' && (piece[0] !== 'w' && piece[0] !== 'W')) ||
+        (turn === 'b' && (piece[0] !== 'b' && piece[0] !== 'B')))
         return false;
     }
 
@@ -129,7 +129,7 @@
       if (game2.gameOver()) return false;
       var turn = game2.turn();
       if ((turn === 'w' && (piece[0] !== 'w' && piece[0] !== 'W')) ||
-        (turn === 'b' && piece[0] !== 'b'))
+        (turn === 'b' && (piece[0] !== 'b' && piece[0] !== 'B')))
         return false;
     }
 

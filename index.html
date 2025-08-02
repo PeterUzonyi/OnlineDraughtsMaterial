@@ -22,15 +22,15 @@
   </p>
 
   <br>
-    Példa megoldás: <br>
-    var solution = ["32-28", "2-8", "28-22", "8-12", "31-26", "1-6", "22-17", "12x21", "26x17"]
+  Példa megoldás: <br>
+  var solution = ["32-28", "2-8", "28-22", "8-12", "31-26", "1-6", "22-17", "12x21", "26x17"]
   </p>
 
-  <div id="board" style="width: 500px"></div>
+  <div id="board1" style="width: 500px"></div>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/draughts.js"></script>
   <script src="js/draughtsboard.js"></script>
-  <link rel="css/stylesheet" href="draughtsboard.css">
+  <link rel="css/stylesheet" href="css/draughtsboard.css">
 
   <script>
     // Itt már nem XML-t olvasunk, hanem JS-ben állítjuk be a kezdő pozíciót (lásd előző példát):
@@ -63,7 +63,7 @@
       var solution = ["32-28", "2-8", "28-22", "8-12", "31-26", "1-6", "22-17", "12x21", "26x17"];
 
       //Ennek ellenőrzése:
-      if (moveCount == solution.length+1) { //Ha elfogyott az összes lépés a megoldásból
+      if (moveCount == solution.length + 1) { //Ha elfogyott az összes lépés a megoldásból
         game.gameOver();
       } else {
         var goodMove = solution[moveCount].split('-');  //A megoldás feldarabolás source-ra és target-re (ütésre még meg kell csinálni)
@@ -102,7 +102,7 @@
       onSnapEnd: onSnapEnd,
       pieceTheme: 'unicode'
     };
-    var board = DraughtsBoard('board', config);
+    var board = DraughtsBoard('board1', config);
   </script>
 
   <p>
@@ -114,6 +114,54 @@
     error accusamus eos aliquid qui id. Velit fuga accusamus laboriosam in quisquam aut nam sapiente!
   </p>
 
+  <div id="board2" style="width: 500px"></div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/draughts.js"></script>
+  <script src="js/draughtsboard.js"></script>
+  <link rel="css/stylesheet" href="css/draughtsboard.css">
+
+  <script>
+    var fen2 = 'W:W12:B7,8'; // Ez a fehér (31) és két fekete (27,28) bábu pozíciója
+    var game2 = new Draughts(fen2);
+
+    function onDragStart(source, piece, position, orientation) {
+      console.log(game2.moves());
+      if (game2.gameOver()) return false;
+      var turn = game2.turn();
+      if ((turn === 'w' && (piece[0] !== 'w' && piece[0] !== 'W')) ||
+        (turn === 'b' && piece[0] !== 'b'))
+        return false;
+    }
+
+    function onDrop(source, target) {
+      //Összes szabályos lépés (a dáma lépései rosszul vannak implementálva 
+      // (a dáma csak 1-et tud lépni előre vagy hátra, pedig az átló bármelyik mezőjére kéne tudnia lépni), 
+      // de az ütései jól vannak implementálva)
+      var legal2 = game2.moves(); 
+
+      var tryMove2 = legal2[0]; //Így a fenti objektum típusú a tryMove
+      tryMove2.from = source;
+      tryMove2.to = target;
+      var move2 = game2.move(tryMove2);
+      if (move2 === null) {
+        return 'snapback';
+      }
+    }
+
+    function onSnapEnd() {
+      board2.position(game2.fen());
+    }
+
+    var config = {
+      draggable: true,
+      position: fen2,
+      onDragStart: onDragStart,
+      onDrop: onDrop,
+      onSnapEnd: onSnapEnd,
+      pieceTheme: 'unicode'
+    };
+    var board2 = DraughtsBoard('board2', config);
+  </script>
 
 
   <p>

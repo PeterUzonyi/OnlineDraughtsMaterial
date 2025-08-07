@@ -728,7 +728,7 @@ var Draughts = function (fen) {
         break
       case 'W':
       case 'B':
-        dirStrings = directionStrings(position, posFrom, 2)
+        dirStrings = directionStrings(position, posFrom)//A dáma akármeddig mehet az átlón, ha üres az átló
         for (dir in dirStrings) {
           str = dirStrings[dir]
 

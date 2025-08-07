@@ -69,45 +69,10 @@
       function onDragStart(source, piece, position, orientation) {
         if (game.gameOver()) return false;
         var turn = game.turn();
-        var legal = game.moves();
-        console.log('Lehetséges lépések:', legal);
         if ((turn === 'w' && (piece[0] !== 'w' && piece[0] !== 'W')) ||
           (turn === 'b' && (piece[0] !== 'b' && piece[0] !== 'B')))
           return false;
       }
-      /*
-      function onDrop(source, target) {
-        var legal = game.moves();
-        console.log('Lehetséges lépések:', legal);
-        var tryMove = legal[0];
-        tryMove.from = source;
-        tryMove.to = target;
-        if (moveCount == pos.solution.length + 1) {
-          game.gameOver();
-        } else {
-          var goodMove = pos.solution[moveCount].split(/[-x]/);
-          if (source == goodMove[0] && target == goodMove[1]) {
-            var move = game.move(tryMove);
-            if (move === null) {
-              return 'snapback';
-            } else {
-              moveCount += 1;
-              // Automatikus válasz, ha van még lépés
-              if (moveCount < pos.solution.length) {
-                var blackMove = game.moves()[0];
-                var next = pos.solution[moveCount].split(/[-x]/);
-                blackMove.from = next[0];
-                blackMove.to = next[1];
-                game.move(blackMove);
-                moveCount += 1;
-              }
-            }
-          } else {
-            return 'snapback';
-          }
-        }
-      }
-        */
       function onDrop(source, target) {
         var legal = game.moves();
         var goodMove = pos.solution[moveCount].split(/[-x]/);

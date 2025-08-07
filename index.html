@@ -39,8 +39,8 @@
       {
         "id": "2",
         "fen": "W:W12:B8,11",
-        "solution": ["12x3", "11-16", "3-26"],
-        "comment": "Ez egy másik példa, ahol a fehér bábu 12-ről 3-ra lép, majd a fekete bábu 7-ről 12-re lép, és végül a fehér bábu 3-ról 17-re lép. A megoldás lépései szintén sorban követik egymást."
+        "solution": ["12x3", "11-16", ["3-8", "3-12", "3-17", "3-26"]],
+        "comment": "Ez egy másik példa, ahol a fehér bábu 12-ről 3-ra lép, majd a fekete bábu 11-ről 16-ra lép, és végül a fehér dáma 3-ról akárhova léphet, csak 21-re nem. A megoldás lépései szintén sorban követik egymást."
       }
     ];
 
@@ -75,31 +75,34 @@
       }
       function onDrop(source, target) {
         var legal = game.moves();
-        var goodMove = pos.solution[moveCount].split(/[-x]/);
+        let currentSolution = pos.solution[moveCount];
+        let goodMoves = Array.isArray(currentSolution) ? currentSolution : [currentSolution];
+        // A megadott több jó megoldások közül nézi meg, hogy a lépés jó-e
+        let isGood = goodMoves.some(sol => {
+          let [from, to] = sol.split(/[-x]/);
+          return source == from && target == to;
+        });
         // Keresd meg a lehetséges lépések között a megfelelőt!
         var found = legal.find(m => m.from == source && m.to == target);
-        if (!found) {
+        if (!found || !isGood) {
           return 'snapback';
         }
-        // Csak akkor engedjük, ha a solution-ban is ez a lépés következik:
-        if (source == goodMove[0] && target == goodMove[1]) {
-          var move = game.move(found);
-          if (move === null) {
-            return 'snapback';
-          } else {
-            moveCount += 1;
-            // Automatikus válasz, ha van még lépés
-            if (moveCount < pos.solution.length) {
-              var next = pos.solution[moveCount].split(/[-x]/);
-              var blackMove = game.moves().find(m => m.from == next[0] && m.to == next[1]);
-              if (blackMove) {
-                game.move(blackMove);
-                moveCount += 1;
-              }
+        var move = game.move(found);
+        if (move === null) {
+          return 'snapback';
+        } else {
+          moveCount += 1;
+          // Automatikus válasz, ha van még lépés
+          if (moveCount < pos.solution.length) {
+            let nextSol = pos.solution[moveCount];
+            let nextMoves = Array.isArray(nextSol) ? nextSol : [nextSol];
+            let next = nextMoves[0].split(/[-x]/);
+            let blackMove = game.moves().find(m => m.from == next[0] && m.to == next[1]);
+            if (blackMove) {
+              game.move(blackMove);
+              moveCount += 1;
             }
           }
-        } else {
-          return 'snapback';
         }
       }
       function onSnapEnd() {

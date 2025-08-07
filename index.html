@@ -5,9 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teszt</title>
-  <script src="js/draughts.js"></script>
-  <script src="js/draughtsboard.js"></script>
-  <link href="css/draughtsboard.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -21,148 +18,110 @@
     nesciunt.
   </p>
 
-  <br>
-  Példa megoldás: <br>
-  var solution = ["32-28", "2-8", "28-22", "8-12", "31-26", "1-6", "22-17", "12x21", "26x17"]
-  </p>
-
-  <div id="board1" style="width: 500px"></div>
+  <div id="boards"></div>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="js/draughts.js"></script>
   <script src="js/draughtsboard.js"></script>
-  <link rel="css/stylesheet" href="css/draughtsboard.css">
-
+  <link rel="stylesheet" href="css/draughtsboard.css">
   <script>
-    // Itt már nem XML-t olvasunk, hanem JS-ben állítjuk be a kezdő pozíciót (lásd előző példát):
-    var fen = 'W:W31,32:B1,2'; // Ez a két fehér (31,32) és két fekete (1,2) bábu pozíciója
-    var game = new Draughts(fen);
+    //A positions tömb tartalmazza az összes állást.
 
-    function onDragStart(source, piece, position, orientation) {
-      if (game.gameOver()) return false;
-      var turn = game.turn();
-      if ((turn === 'w' && (piece[0] !== 'w' && piece[0] !== 'W')) ||
-        (turn === 'b' && (piece[0] !== 'b' && piece[0] !== 'B')))
-        return false;
-    }
+    //A "fen" tartalmazza a kezdő állást,
+    //A "solution" tartalmazza a megoldást,
+    //A "comment" tartalmazza azt a szövegrészt, ami az adott tábla előtti magyarázat
+    const positions = [
+      {
+        "id": "1",
+        "fen": "W:W31,32:B1,2",
+        "solution": ["32-28", "2-8", "28-22", "8-12", "31-26", "1-6", "22-17", "12x21", "26x17"],
+        "comment": "Ez egy egyszerű példa, ahol a fehér bábu 31-ről 28-ra lép, majd a fekete bábu 2-ről 8-ra lép, és így tovább. A megoldás lépései sorban követik egymást."
+      },
+      {
+        "id": "2",
+        "fen": "W:W12:B7,8",
+        "solution": ["12x3", "7-12", "3x17"],
+        "comment": "Ez egy másik példa, ahol a fehér bábu 12-ről 3-ra lép, majd a fekete bábu 7-ről 12-re lép, és végül a fehér bábu 3-ról 17-re lép. A megoldás lépései szintén sorban követik egymást."
+      }
+    ];
+
+    positions.forEach((pos, idx) => {
+      //Szöveg beszúrása
+      if (pos.comment) {
+        const commentDiv = document.createElement('div');
+        commentDiv.innerHTML = pos.comment;
+        commentDiv.style.margin = '0 0 20px 0';
+        document.getElementById('boards').appendChild(commentDiv);
+      }
 
 
-    //A lépés szintaktikája, objektuma: 
-    // var Lépés = { jumps: [], takes: [], from: 31, to: 27, piecesTaken: undefined };
+      // 1. Tábla div létrehozása
+      const boardDiv = document.createElement('div');
+      boardDiv.id = 'board' + idx;
+      boardDiv.style.width = '500px';
+      boardDiv.style.marginBottom = '30px';
+      document.getElementById('boards').appendChild(boardDiv);
 
-    var moveCount = 0; //A megoldás lépéseinek indexe
+      // 2. Draughts példány és megoldás
+      const game = new Draughts(pos.fen);
+      let moveCount = 0;
 
-    function onDrop(source, target) {
-      var legal = game.moves(); //Összes szabályos lépés
-
-      var tryMove = legal[0]; //Így a fenti objektum típusú a tryMove
-      tryMove.from = source;
-      tryMove.to = target;
-
-      //Példa jó megoldás
-      //32-28, 2-8, 28-22, 8-12, 31-26, 1-6, 22-17, 12x21, 26x17, gameOver()
-      var solution = ["32-28", "2-8", "28-22", "8-12", "31-26", "1-6", "22-17", "12x21", "26x17"];
-
-      //Ennek ellenőrzése:
-      if (moveCount == solution.length + 1) { //Ha elfogyott az összes lépés a megoldásból
-        game.gameOver();
-      } else {
-        var goodMove = solution[moveCount].split('-');  //A megoldás feldarabolás source-ra és target-re (ütésre még meg kell csinálni)
-        if (source = goodMove[0] && target == goodMove[1]) { //Ha a lépés jó
-          var move = game.move(tryMove); // Ha a lépés szabályos
-          if (move === null) {
-            return 'snapback';
+      // 3. Eseménykezelők
+      function onDragStart(source, piece, position, orientation) {
+        if (game.gameOver()) return false;
+        var turn = game.turn();
+        if ((turn === 'w' && (piece[0] !== 'w' && piece[0] !== 'W')) ||
+          (turn === 'b' && (piece[0] !== 'b' && piece[0] !== 'B')))
+          return false;
+      }
+      function onDrop(source, target) {
+        var legal = game.moves();
+        var tryMove = legal[0];
+        tryMove.from = source;
+        tryMove.to = target;
+        if (moveCount == pos.solution.length + 1) {
+          game.gameOver();
+        } else {
+          var goodMove = pos.solution[moveCount].split(/[-x]/);
+          if (source == goodMove[0] && target == goodMove[1]) {
+            var move = game.move(tryMove);
+            if (move === null) {
+              return 'snapback';
+            } else {
+              moveCount += 1;
+              // Automatikus válasz, ha van még lépés
+              if (moveCount < pos.solution.length) {
+                var blackMove = game.moves()[0];
+                var next = pos.solution[moveCount].split(/[-x]/);
+                blackMove.from = next[0];
+                blackMove.to = next[1];
+                game.move(blackMove);
+                moveCount += 1;
+              }
+            }
           } else {
-            console.log('Jó lépés');
-            moveCount += 1;
-
-            //Fekete automatikus válasz lépése (ütésre még meg kell csinálni)
-            var blackMove = game.moves()[0];
-            blackMove.from = solution[moveCount].split('-')[0];
-            blackMove.to = solution[moveCount].split('-')[1];
-            game.move(blackMove);
-            moveCount += 1;
+            return 'snapback';
           }
-        } else { //Ha a lépés nem a megoldás
-          console.log('Nem jó megoldás');
-          return 'snapback';
         }
       }
-
-    }
-
-    function onSnapEnd() {
-      board.position(game.fen());
-    }
-
-    var config = {
-      draggable: true,
-      position: fen,
-      onDragStart: onDragStart,
-      onDrop: onDrop,
-      onSnapEnd: onSnapEnd,
-      pieceTheme: 'unicode'
-    };
-    var board = DraughtsBoard('board1', config);
-  </script>
-
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum sunt adipisci, dolorum, voluptate nostrum
-    repellendus quia iste deleniti, accusamus consequuntur illo? Esse neque alias ex laudantium quos fugit saepe?
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat ad id, aspernatur unde consequatur
-    veritatis ea adipisci rerum minima atque tempora recusandae. Harum autem molestias, quis dicta maiores error?
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit excepturi facere iusto dolorem fugit debitis,
-    error accusamus eos aliquid qui id. Velit fuga accusamus laboriosam in quisquam aut nam sapiente!
-  </p>
-
-  <div id="board2" style="width: 500px"></div>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="js/draughts.js"></script>
-  <script src="js/draughtsboard.js"></script>
-  <link rel="css/stylesheet" href="css/draughtsboard.css">
-
-  <script>
-    var fen2 = 'W:W12:B7,8'; // Ez a fehér (31) és két fekete (27,28) bábu pozíciója
-    var game2 = new Draughts(fen2);
-
-    function onDragStart(source, piece, position, orientation) {
-      console.log(game2.moves());
-      if (game2.gameOver()) return false;
-      var turn = game2.turn();
-      if ((turn === 'w' && (piece[0] !== 'w' && piece[0] !== 'W')) ||
-        (turn === 'b' && (piece[0] !== 'b' && piece[0] !== 'B')))
-        return false;
-    }
-
-    function onDrop(source, target) {
-      //Összes szabályos lépés (a dáma lépései rosszul vannak implementálva 
-      // (a dáma csak 1-et tud lépni előre vagy hátra, pedig az átló bármelyik mezőjére kéne tudnia lépni), 
-      // de az ütései jól vannak implementálva)
-      var legal2 = game2.moves(); 
-
-      var tryMove2 = legal2[0]; //Így a fenti objektum típusú a tryMove
-      tryMove2.from = source;
-      tryMove2.to = target;
-      var move2 = game2.move(tryMove2);
-      if (move2 === null) {
-        return 'snapback';
+      function onSnapEnd() {
+        boards[idx].position(game.fen());
       }
-    }
 
-    function onSnapEnd() {
-      board2.position(game2.fen());
-    }
-
-    var config = {
-      draggable: true,
-      position: fen2,
-      onDragStart: onDragStart,
-      onDrop: onDrop,
-      onSnapEnd: onSnapEnd,
-      pieceTheme: 'unicode'
-    };
-    var board2 = DraughtsBoard('board2', config);
+      // 4. DraughtsBoard példány
+      const config = {
+        draggable: true,
+        position: pos.fen,
+        onDragStart: onDragStart,
+        onDrop: onDrop,
+        onSnapEnd: onSnapEnd,
+        pieceTheme: 'unicode'
+      };
+      // Tároljuk a boardokat, ha kell később
+      window.boards = window.boards || [];
+      window.boards[idx] = DraughtsBoard(boardDiv.id, config);
+    });
   </script>
-
+  
 
   <p>
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum sunt adipisci, dolorum, voluptate nostrum

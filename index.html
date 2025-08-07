@@ -38,8 +38,8 @@
       },
       {
         "id": "2",
-        "fen": "W:W12:B7,8",
-        "solution": ["12x3", "7-12", "3x17"],
+        "fen": "W:W12:B8,11",
+        "solution": ["12x3", "11-16", "3-26"],
         "comment": "Ez egy másik példa, ahol a fehér bábu 12-ről 3-ra lép, majd a fekete bábu 7-ről 12-re lép, és végül a fehér bábu 3-ról 17-re lép. A megoldás lépései szintén sorban követik egymást."
       }
     ];
@@ -69,12 +69,16 @@
       function onDragStart(source, piece, position, orientation) {
         if (game.gameOver()) return false;
         var turn = game.turn();
+        var legal = game.moves();
+        console.log('Lehetséges lépések:', legal);
         if ((turn === 'w' && (piece[0] !== 'w' && piece[0] !== 'W')) ||
           (turn === 'b' && (piece[0] !== 'b' && piece[0] !== 'B')))
           return false;
       }
+      /*
       function onDrop(source, target) {
         var legal = game.moves();
+        console.log('Lehetséges lépések:', legal);
         var tryMove = legal[0];
         tryMove.from = source;
         tryMove.to = target;
@@ -103,6 +107,36 @@
           }
         }
       }
+        */
+      function onDrop(source, target) {
+        var legal = game.moves();
+        var goodMove = pos.solution[moveCount].split(/[-x]/);
+        // Keresd meg a lehetséges lépések között a megfelelőt!
+        var found = legal.find(m => m.from == source && m.to == target);
+        if (!found) {
+          return 'snapback';
+        }
+        // Csak akkor engedjük, ha a solution-ban is ez a lépés következik:
+        if (source == goodMove[0] && target == goodMove[1]) {
+          var move = game.move(found);
+          if (move === null) {
+            return 'snapback';
+          } else {
+            moveCount += 1;
+            // Automatikus válasz, ha van még lépés
+            if (moveCount < pos.solution.length) {
+              var next = pos.solution[moveCount].split(/[-x]/);
+              var blackMove = game.moves().find(m => m.from == next[0] && m.to == next[1]);
+              if (blackMove) {
+                game.move(blackMove);
+                moveCount += 1;
+              }
+            }
+          }
+        } else {
+          return 'snapback';
+        }
+      }
       function onSnapEnd() {
         boards[idx].position(game.fen());
       }
@@ -121,7 +155,7 @@
       window.boards[idx] = DraughtsBoard(boardDiv.id, config);
     });
   </script>
-  
+
 
   <p>
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum sunt adipisci, dolorum, voluptate nostrum

@@ -79,6 +79,22 @@ h1, h3 {
   font-weight: normal;
 }
 
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: "- ";
+}
+
+a {
+  /*text-decoration: none;*/
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #ujoldal{
   margin-top: 80px;
 }
@@ -91,16 +107,18 @@ h1, h3 {
   text-align: right;
 }
 
+.kozepre {
+  text-align: center;
+}
+
 .NoBottomMargin {
   margin-bottom: 0;
 }
 
-ul {
+.NoTopMargin {
   margin-top: 0;
-  margin-bottom: 0;
-  list-style-type: "- ";
 }
 
-a {
-  /*text-decoration: none;*/
+.behuzas {
+  margin-left: 30px;
 }

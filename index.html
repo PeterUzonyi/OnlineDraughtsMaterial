@@ -861,8 +861,8 @@
       },
       {
         "id": "18",//15. Oldal
-        "fen": "W:WK31:B12,18,19,23,29,33,40",
-        "solution": ["31x3"],
+        "fen": "W:WK8,25:B10,19,29,K30,38",
+        "solution": ["25x5"],
         "comment": "<p>Itt a dáma (az előző oldalon lévő 17. ábrán) a sötét korongokat ily módon tudja (és köteles is!) levenni: " +
           "31x13x35x44x17x3. Az ütés során kétszer áthaladt a 22. mezőn, de ez nem lehetett akadály, hiszen egy ütőlépés alatt többször " +
           "is át lehet lépni ugyanazt az üres mezőt.</p>" +
@@ -871,6 +871,55 @@
           "kell, akkor meg kell tennünk. De mi van akkor, ha lehetőségünk lenne több különböző ütőlépést tenni? Melyiket választhatjuk? " +
           "<u class=\"felkover\">Első szabály</u>. Ha különböző ütések lehetségesek, akkor azt kell választani, amellyel a legtöbb korongot (mindegy, hogy gyalogot " +
           "vagy dámát) tudjuk levenni. Ezt a szabályt <span class=\"felkover\">többségi szabálynak</span> nevezzük. <br>Ezt magyarázni fogunk a következő ábrán:</p>"
+      },
+      {
+        "id": "19",
+        "fen": "W:WK8,25:B10,19,29,K30,31,32",
+        "solution": [["25x5", "8x36"]],
+        "comment": "<p>A világos lép. Látjuk, hogy három különböző ütési lehetősége van: <br>1. 25x34x23x14x5 (leszedünk négy korongot), " +
+          "<br>2. 8x24x35 (leszedünk két korongot), vagy <br>3. 8x24x33x47 (leszedünk három korongot). <br>Tehát a többségi szabály " +
+          "értelmében a világos köteles azt az ütőlépést választani, amellyel négy korongot vesz le, vagyis 25x5. Amikor egyforma számú " +
+          "korongot két- vagy többféleképpen lehet bevenni, akkor a legkedvezőbbet kell választani.</p>"
+      },
+      {
+        "id": "20",
+        "fen": "W:W39,K45,K50:B1,17,42",
+        "solution": ["45-29", "42-48", "29-12", "48x7", "50x2"],
+        "comment": "<p>Milyen ütőlépések lehetségesek a 19. ábrán látható pozícióban? <br>1. 25x34x23x14x5; <br>2. 8x24x35; <br>3. " +
+          "8x24x38x27x36. <br>Az első és a harmadik úton lehet a legtöbb (vagyis négy) korongot levenni. Ebben az esetben az, aki üt, " +
+          "választhat ezekből a lehetőségekből. Nem mindig végződik szerencsésen a többségi szabály szerinti ütés annak, aki üt. Íme, " +
+          "lejjebb egy egyszerű példa:</p>"
+      },
+      {
+        "id": "21",
+        "fen": "W:W33,35:B7,8,19,24,30",
+        "solution": ["33-29", "24x33", "35x11"],
+        "comment": "<p>Úgy néz ki, hogy a világos már nem nyerhet: a sötét gyalog a következő lépése után dámává válik, a száznégyzetes " +
+          "táblán pedig három dáma sem elég az ellenfél egyetlen dámájának elfogásához (persze, ha hibátlanul játszanak). De itt a világos " +
+          "ezt lépi: 1. 45-29! Ezzel megtámadta a 42. korongot. Muszáj bemennie a dámába. De a 42-47 lépés azért nem jó, mert a világos " +
+          "válaszlépése 29-38, és a sötétnek ütnie kell két korongot (47x44), és a következő lépésben a világos leüti, így azonnal veszít. " +
+          "Emiatt a sötét lépése 1. … 42-48; gyalogból dáma lett. Most mintha biztonságban lenne a sötét, sőt maga is támadja a 39. korongot. " +
+          "A világos számított erre és így lépett: 2. 29-12!! A sötét ösztönösen be akarta venni a 12. dámát a 17. koronggal. Figyelmesebben " +
+          "körülnézve azonban észrevette, hogy (sajnálatos módon) egy másik ütéssel két korongot tudna levenni és a többségi szabály alapján " +
+          "<span class=\"felkover\">köteles</span> is, éspedig 2. … 48x7, amire a világos válasza a következő lenne: 3. 50x2, s a parti az ő " +
+          "győzelemével végződne. A sötét inkább lépés nélkül feladta.</p>" +
+          "<p><u class=\"felkover\">Második szabály.</u>   A második és a harmadik szabály azokra az esetekre vonatkoznak, amikor a gyalog nem " +
+          "sima lépéssel kerül a dámamezőre, hanem ütés során. A szabály kimondja: ha gyalog az ütőlépése folyamán a dámamezőre lép és ezzel " +
+          "a lépéssel gyalogként tovább tud ütni, akkor köteles azt megtenni. Az ütőlépése befejezése után a gyalog nem válik a dámává, hanem " +
+          "gyalog marad.</p>"
+      },
+      {
+        "id": "22",//16. Oldal
+        "fen": "W:W25,30:B9,12,18,29",
+        "solution": ["30-24", "29x20", "25x3"],
+        "comment": "<p>A 21. ábrán (lásd előző oldalt) a világos lépése: 1. 33-29. A sötét válasza: 24x33. A világos üt: 2. 35x24x13x2x11. " +
+          "Látjuk, hogy a 35. korong, ütés közben, rálépett a dámamezőre, de kénytelen volt folytatni az ütést a gyalog jogán és ezért nem " +
+          "változott dámává.</p>" +
+          "<p><u class=\"felkover\">Harmadik szabály. </u>   Ha egy gyalog ütőlépés folytán a dámamezőre kerül és tovább a gyalog joga " +
+          "szerint nincs mit ütnie, ott marad és dámává válik. Az ilyen módon létrejött újszülött dáma a dámajogot csak az ellenfél " +
+          "válaszlépése után szerzi meg. <br>Nézzük meg a következő ábrát. <br>A 22. ábra példáján (a világos kezd): 1. 30-24 29x20; " +
+          "2. 25x3. A 25. gyalog átváltozott dámává, de leütni a 12. korongot csak a következő lépéssel tudná, vagyis az ellenfél " +
+          "válasza után.</p>"
       }
     ];
 
@@ -928,8 +977,13 @@
           if (moveCount < pos.solution.length) {
             let nextSol = pos.solution[moveCount];
             let nextMoves = Array.isArray(nextSol) ? nextSol : [nextSol];
-            let next = nextMoves[0].split(/[-x]/);
-            let blackMove = game.moves().find(m => m.from == next[0] && m.to == next[1]);
+            // Végigmegyünk az összes megoldáson, és az első szabályos lépést választjuk
+            let blackMove = null;
+            for (let sol of nextMoves) {
+              let [from, to] = sol.split(/[-x]/);
+              blackMove = game.moves().find(m => m.from == from && m.to == to);
+              if (blackMove) break;
+            }
             if (blackMove) {
               game.move(blackMove);
               moveCount += 1;

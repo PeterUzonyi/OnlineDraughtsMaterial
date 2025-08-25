@@ -815,8 +815,8 @@
       },
       {
         "id": "15",
-        "fen": "W:W12:B8,11",
-        "solution": ["12x3", "11-16", ["3-8", "3-12", "3-17", "3-26"]],
+        "fen": "W:WK8,22:B19,23,29,33,40",
+        "solution": ["8x28", "23x32"],
         "comment": "<p>A világos lép (14. ábra). A 46. dáma nem ütheti le a 19. korongot, mivel az útján áll egy világos korong " +
           "(átugrani a saját korongját nem szabad). A 42. dámának nincs joga levenni a 33. korongot, mert közvetlen mögötte nincs szabad " +
           "mező. A 48. dáma viszont nemcsak tud, hanem köteles is ütni. Előbb leveszi a 34. korongot (48x30), majd megállás nélkül leveszi " +
@@ -825,8 +825,30 @@
           "világos dámának „elkanyarodnia” a 27. korongért? Nem lett volna jobb levenni csak két sötét korongot – a 30. és a 19.-et – és " +
           "tovább menni, mondjuk a 2. mezőre, majd ott nyugodtan megállni? Nem, ezt megtenni nem szabad, hiszen a dáma köteles egy lépés " +
           "alatt annyit leszedni az ellenfél korongjai közül, amennyit csak lehetséges. Itt három korongot volt lehetőség levenni, ezért a " +
-          "dámának muszáj leszednie mind a hármat.</p>"+//14. Oldal
-          "<p>Megjegyzés a török ütésről</p>"
+          "dámának muszáj leszednie mind a hármat.</p>" +//14. Oldal
+          "<p>Megjegyzés a török ütésről</p>" +
+          "<p><span class=\"felkover\">A megjegyzés a gyalogokra és a dámákra egyaránt vonatkozik.</span><br>a). Amikor leütjük az " +
+          "ellenfél néhány korongját, azokat a tábláról csak a lépés befejezése után szabad levenni, vagyis nem az ütés folyamán. " +
+          "Íme, a magyarázó példa a 15. ábrán.</p>"
+      },
+      {
+        "id": "16",
+        "fen": "W:WK31,42:B19,22,23,29,33,40",
+        "solution": ["31x28", "23x32"],
+        "comment": "<p>Mi lenne, ha a sötét korongokat leszedegetnénk a tábláról még a világos dáma ütőlépésének befejezése előtt? A " +
+          "következő: 8x35 (levesszük a 19. korongot), 35x44 (levesszük a 40. korongot), 44x28 (a 33. korong is lekerül!) és 28x10 " +
+          "(a 23. korong is lekerült a tábláról), tehát 4 korongot szedtünk volna le, és megnyertük volna a játszmát. De ilyen módon " +
+          "leszedni korongokat tilos, csak a lépés befejezése után ez megengedett. Vajon lesz-e különbség? Nézzük meg: 8x35 (a 19. " +
+          "korong egyelőre marad a táblán), 35x44 és 44x28, és most látjuk, hogy a 23. korongot ezzel a lépéssel még nem tudjuk leütni " +
+          "(nincs mögötte szabad mező – ott áll a 19. korong!). Ezért befejezzük az ütést, megállítjuk dámát a 28. mezőn és leszedjük a " +
+          "tábláról a három sötét (19., 40. és 33.) korongot. Ezután a sötét leüti a dámánkat 23x32. A világos 22. korong bemegy a dámába, " +
+          "a két sötét korong szintén dáma lesz, és a parti döntetlennel fejeződik be, hiszen két dáma nem tud elfogni egyetlen dámát. " +
+          "Ahogy látjuk, van különbség. Az olyan ütést, amikor egy gyakorlatilag már leütött (de az ütés végéig a tábláról le nem szedett) " +
+          "korong zavarja az ütést végző dáma további mozgását, <span class=\"felkover\">török ütésnek</span> nevezik.<br>" +
+          "b). Ütéskor egy lépés alatt nem szabad még egyszer átugrani az ellenfél „már leütött” korongját.<br>" +
+          "c). Viszont ugyanazon szabad mezőn keresztül egy lépés alatt többször is át szabad menni.</p>" +
+          "<p>Hogyan léphet a világos a 16. ábrán? Csakis így: 31x13, a 22. korongot a táblán hagyva, majd folytatja; 13x35x44x28. A " +
+          "dáma további útja lezárt. Hogy miért nem lehet levenni a 23. korongot, azt láttuk az ezelőtti példán.</p>"
       }
     ];
 

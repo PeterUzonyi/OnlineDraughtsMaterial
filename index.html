@@ -1420,7 +1420,7 @@
       {
         "id": 63,
         "fen": "W:W27,28,32,33,34,35,36,37,38,40,42,45,47,48,49,50:B1,2,3,4,6,11,12,13,14,15,16,18,19,20,21,29",
-        "solution": ["33x24","19x39","50-44","39x50","49-43","50x31","37x10"],
+        "solution": ["33x24", "19x39", "50-44", "39x50", "49-43", "50x31", "37x10"],
         "comment": "<p>Még egy példa (62. ábra) – a kombinációban a III. szabály és a többségi szabály egyesítése. Világos lépett 1. 20-15?, " +
           "és sötét egyszerre két szabad tempót kapott. Kár, hogy a partiban sötét nem tudta megtalálni ezt a szép kombinációt: 1… 16-21!!; " +
           "2. 15x4 33-38!; 3. 4x16 38x47; 4. 16x38 47x49 és az eredmény már látszik. Ezt a kombinációt már a parti után mutatta meg Zinovij " +
@@ -1433,21 +1433,63 @@
       },
       {
         "id": 64,//27. Oldal
-        "fen": "",
-        "solution": [""],
+        "fen": "W:W22,27,33,36,37,38,40,46,47,48,50:B1,3,6,7,11,14,16,19,20,23,26",
+        "solution": ["36-31", "23-28", "27-21", "16x36", "37-31", "36x18", "33x15"],
         "comment": "<p class=\"kozepre\"><span class=\"felkover\">Balzsalarszkij – Dunajevszkij, 1956</span></p>"
       },
       {
         "id": 65,
-        "fen": "",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "W:W16,21,26,33,34,38,39,40,41,45:B7,8,12,14,18,19,22,23,24,25",
+        "solution": ["34-30", "25x32", "33-28", "22x33", "21-17", "12x21", "16x9"],
+        "comment": "<p>64. ábra. Világos lépett 1. 36-31! És válaszul a csábító 1… 23-28? után az ellenfélre váratlan csapást mért: 2. 27-21! " +
+          "16x36; 3. 37-31! 36x18; 4. 33x15. Attól függetlenül, hogy a korongok száma egyenlő, világos bebiztosította magának az áttörést sötét " +
+          "legyengített szárnyán.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Kozlov – Kustarjov, 1956</span></p>"
       },
       {
         "id": 66,
+        "fen": "W:W23,28,29,32,39,41:B8,9,10,13,21,36",
+        "solution": ["39-34", "36x47", "28-22", "47x20", "34-29", "20x18", "23x5"],
+        "comment": "<p>65. ábra. Világos a 47-41 utolsó lépésével az ellenfél természetes lépésére előkészített egy jól álcázott gyönyörű " +
+          "kombinációt. A folytatás a partiban ez volt: 1… 13-19? 2. 34-30! 25x32; 3. 33-28! 22x33; 4.21-17 12x21; 5.16x9. És a célt elérték! " +
+          "A fenti példákon keresztül meggyőződhettetek arról, hogy a száznégyzetes dámajáték három megkülönböztető szabálya lehetőséget ad " +
+          "játék közben megvalósítani váratlan és szép kombinációkat.</p>" +
+          "<p>Végezetül még néhány példa a török ütésre (lásd a megjegyzést a 15., 16., 17. ábrákhoz):</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Eekhaud</span></p>"
+      },
+      {
+        "id": 67,
+        "fen": "W:W31,38,39,40,41,42,48,49:B8,11,15,18,21,23,28,29",
+        "solution": ["40-34", "29x40", "49-44", "40x49", "39-33", "49x47", "33x2", "47x29", "2x24"],
+        "comment": "<p>66. ábra. Sötét lépett 1… 31-36? (lépni a 31-37? sem szabad, mert következik 2. 41-36 37-42; 3. 32-27, és sötét " +
+          "korongot veszít). Alkalmazva a török ütés szabályát, világos rafinált kombinációt tesz: 2. 39-34! 36x47; 3. 28-22! 47x20; 4. 34-29 " +
+          "20x18 (és csak azután veszi le a tábláról a 29., 32. és 22. korongot) 5. 23x5 és világos nyer.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Kovrizskin</span></p>"
+      },
+      {
+        "id": 68,
+        "fen": "W:W7,17,27,37,45,49:B6,19,20,23,26,28,30,39",
+        "solution": [["7-1", "6-11", "1x14", "11x42", "14x25"],
+        ["7-1", "6-11", "1x14", "11x42", "14x30"],
+        ["7-1", "6-11", "1x14", "11x42", "14x34"]],
+        "comment": "<p>67. ábra. Ezt a feladatot Kovrizskin mester direkt a megfejtéshez találta ki. Nézzük meg ennek a gyönyörű kombinációnak " +
+          "a megfejtését. 1. 40-34! 29x40; 2. 49-44! 40x49; 3. 39-33! 49x47 (török ütés!) 4. 33x2, és a sötét dámának nincs jó lépése. Nagyon jó!</p>" +
+          "<p>Általában a győzelemhez fel szokták használni az ellenfél török ütését. De a következő pozícióban (lásd 68. ábrát) találkozunk " +
+          "egy érdekes esettel, amikor a török ütési szabály annak kedvezett, aki elvégezte ezt az ütést.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Szuplin – Tahman, 1957</span></p>"
+      },
+      {
+        "id": 69,//28. Oldal
+        "fen": "W:W26,27,28,32,38,39,44,45,48,49:B3,6,7,10,11,13,19,23,24,35",
+        "solution": ["28-22","10-14","32-28","23x34","44-40","35x44","49x18"],
+        "comment": "<p>Világos lépett 1. 7-1! És sötét… feladta, mert az 1… 6-11 után lesz 2. 1x14! (ha nem lenne ez a szabály, kellett volna " +
+          "tovább ütni – a 32. mezőre, és a 11x42 után döntetlen lett volna) 2…. 11x42; 3. 14x25.</p>" +
+          "<h4 id=\"ujoldal\" class=\"felkover\">Gyakorlatok</h4>" +
+          "<p>Az alábbi példákban keresd meg a kombinációt és mutasd meg az indítékot, az ötletet és a technikai fogást:</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Bárszkij – Turyj, 1959</span></p>"
+      },
+      {
+        "id": 70,
         "fen": "",
         "solution": [""],
         "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +

@@ -530,7 +530,7 @@
   </p>
 
   <h4 id="Damajatektabla">
-    Dámajátéktábla
+    DÁMAJÁTÉKTÁBLA
   </h4>
 
   <h3 class="felkover">
@@ -570,7 +570,7 @@
   </h3>
 
   <h4 id="Korongok" class="felkover">
-    Korongok
+    KORONGOK
   </h4>
 
   <p class="felkover">
@@ -625,7 +625,7 @@
   </p>
 
   <h4 id="DamajatekNotacio">
-    Dámajáték notáció <span class="normal">(a parti feljegyzése)</span>
+    DÁMAJÁTÉK NOTÁCIÓ <span class="normal">(a parti feljegyzése)</span>
   </h4>
 
   <p>
@@ -987,7 +987,7 @@
       {
         "id": "29",
         "fen": "B:W17,26,27,30,35,38,43,50:B3,6,9,13,16,19,20,24",
-        "solution": ["16-11", "6x17", "28-22", "17x28", "25-20", "14x25", "34-29", "23x34", "32x5"],
+        "solution": ["13-18", "43-39", "19-23", "30x28", "18-23", "28x19", "9-13", "19x8", "3x34"],
         "comment": "<p>Újabb példa a 28. ábrán. Az már tudjátok, hogyan lehet a sötét korongot a 28. mezőre csalni. De most már nem " +
           "lehet leütni 32x5 – zavarnak a 14. és a 23. sötét korongok. De vajon rá lehet-e kényszeríteni az ellenfelet, hogy eltávolítsa " +
           "őket onnan? Igen, lehet. Amikor lépünk 25-20, sötét kénytelen lesz elhagyni a 14. mezőt, és a következő 34-29 lépés után szabad " +
@@ -1007,7 +1007,7 @@
       {
         "id": "30",
         "fen": "B:W26,27,28,32,33,34,35,38,39,41,42,48,49:B1,2,3,8,9,12,13,16,17,19,23,24,25",
-        "solution": [],
+        "solution": ["13-18", "28-22", "17x46", "38-32", "46x28", "33x4"],
         "comment": "<p>A 29. ábrán lévő pozícióban sötét lép. Neki sokkal rosszabb az állása: a 17. világos korong ellenőrzés alatt tartja " +
           "sötét rövid szárnyát, a 19., 20. és 24. korongjai a hosszú szárnyon egyelőre nem tudnak lépni – a 20-25 lépésre következik 17-12, " +
           "és a világos áttör a dámába. És mégis sötét előkészített egy kombinációt. Lépett 1…. 13-18! Világos, mintha hipnózisban volna, " +
@@ -1023,7 +1023,7 @@
           "állnak, <span class=\"felkover\">kombinációs gyengeségnek</span> fogjuk nevezni (ellentétben a pozíciós gyengeséggel, amiről " +
           "később beszélünk). A különböző kombinációs gyengeségek – éppen azok az ismertetőjelek, amelyek alapján feltételezhetjük a " +
           "kombináció létezését.</p>" +
-          "<h4 class=\"InditekOtletTechnikaiFogas\">Indíték, ötlet, technikai fogás</h4>" +
+          "<h4 id=\"InditekOtletTechnikaiFogas\">INDÍTÉK, ÖTLET, TECHNIKAI FOGÁS</h4>" +
           "<p>Hogyan kell megkeresni a kombinációt? Milyen szakaszokra lehet felosztani a keresést (az egyszerűsítés kedvéért)? Térjük vissza " +
           "a 29. ábrához. Figyelmesen megtekintve ezt a pozíciót, megtaláljuk az ellenfél korongjai elhelyezkedésében a kombinációs gyengeséget " +
           "(vagy ugyanazt a várható lépése után). Jelen esetben ez a gyengeség – a 17., 27., 38. és 39. (az előrelátható 43-39 lépés után) " +
@@ -1041,11 +1041,88 @@
           "Ha a pozícióban van kombináció, az azt jelenti, hogy feltétlenül léteznek ezek az elemek – indíték, ötlet és a technikai fogás. " +
           "Megfelelő gyakorlat után egy játszma alatt elég könnyen észre fogjátok venni az indíték létezését, megtaláljátok az ötletet és a " +
           "technikai fogást is.</p>" +
-          "<h4 class=\"KombinaciokVilaga\">A DÁMAJÁTÉK KOMBINÁCIÓK VILÁGA</h4>" +
+          "<h4 id=\"KombinaciokVilaga\">A DÁMAJÁTÉK KOMBINÁCIÓK VILÁGA</h4>" +
           "<p>És most – figyelem! Indulunk a váratlan és lenyűgöző kombinációk csodálatos világába! Ezeknek a kombinációnak az elemzése, " +
           "kétségtelen, mindenkinek elégedettséget okoz. Meg fogjátok érteni, mennyire érdekes és szép a száznégyzetes dámajáték. A " +
           "kombinációk elemzése – nagyon fontos lépés a jövendő sikerekhez vezető úton.</p>" +
           "<p class=\"kozepre\"><span class=\"felkover\">Bárszkij – Batalov, 1957</span></p>"//19. Oldal
+      },
+      {
+        "id": 31,
+        "fen": "B:W27,28,32,34,35,37,38,39,48:B1,3,7,9,12,13,15,19,26",
+        "solution": ["13-18", "27-22", "18-27", "32x21", "26x17", "28-22", "17x28", "39-33", "28x30", "35x4"],
+        "comment": "<p>A 30. ábrán sötét lép. Ebben a helyzetben sötét óvatlanul lépett 1… 13-18? Azonnal, mint a piros lámpa, felvillant az " +
+          "indíték világos kombinációja számára: a nyitott 4. dámamező és előtte a 9. és a 18. sötét korongok – ez egyenes út, hogy ütéssel a " +
+          "4. mezőre szerezhessünk dámát. Ötlet – ütés a 33. mezőről. Szükséges, hogy a világos korong helyett a 28. mezőn egy sötét korong " +
+          "legyen. De hogyan lehet ezt kivitelezni? Keressük a technikai fogást: a 28-22 lépés után a 17. sötét korong a 28. mezőn át bemegy a " +
+          "dámába a 46. mezőre. Viszont őt vissza lehet téríteni– a 38-32 lépéssel. Akkor sötétnek ütni kell 46x28. A sötét korong a 28. mezőre " +
+          "kerül, ami nekünk kellett is! A kombináció elő van készítve, kezdhetjük! A partiban az 1…13-18? után következett 2. 28-22! 17x46; " +
+          "3. 38-32 46x28; 4. 33x4. Bár sötét a dámáért korong-többletet szerzett, de ez nem lett elég a parti megmentéséhez. Rövid küzdelem " +
+          "után sötét kénytelen volt feladni.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Bárszkij – Zelikman, 1959</span></p>"
+      },
+      {
+        "id": 32,
+        "fen": "W:W20,25,29,30,33,37,47,48:B4,7,8,9,13,14,22,27",
+        "solution": ["48-42", "14-19", "20-14", "19x10", "37-32", "27x38", "29-24", "38x20", "25x1"],
+        "comment": "<p>A 31. ábrán szintén sötét kezd. Az 1… 13-18? lépésére világos előkészítette a kombinációt. Indíték ugyanaz, mint " +
+          "az előbb – a nyílt dámamező. Tehát,  az ilyen indítékhoz kell hogy legyen szabad dámamező és előtte átlósan feltétlenül lennie " +
+          "kell az ellenfél korongjának – ez egy láncszem lesz az ütéskor. Itt nálunk pedig két nyitott dámamező is van – a 2. és a 4. Bár " +
+          "rögtön látjuk, hogy a 13-18? lépés után a 4. mezőre egyszerűbb kerülni, mint a 2-re. Felvázoljuk az ötletet – ütés a 4. mezőre a " +
+          "35. koronggal. Ehhez be kell hozni a sötét korongot a 30. mezőre. Megkeresünk a technikai fogást, és a kombináció kész. Tehát, az " +
+          "1… 13-18? esetén következik 2. 27-22! 18x27; 3. 32x21 26x17; 4. 28-22 17x28; 5. 39-33 28x30; 6. 35x4. Egy korongos többlet nem ad " +
+          "sötétnek elegendő kártérítését a dámáért.</p>" +
+          "<p>Néha, attól függetlenül, hogy nyilvánvalóan létezik az indíték a kombinációhoz, annak ötletét megkeresni nagyon nehéz. Ha mégis " +
+          "mindenáron tovább keressük az ötletet, meg lehet próbálni ezt a módszert: gondolatban feláldozod egy-két korongodat az ellenfélnek " +
+          "és, elképzeled az újra alkotott pozíciót, megpróbálod benne megtalálni az ötletet. Ha ez sikerül, és később megtalálod a szükséges " +
+          "technikai fogást, akkor a próba-áldozat lesz a technikai fogás első lépése.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Bárszkij – Kasurin, 1956</span></p>"
+      },
+      {
+        "id": 33,//20. Oldal
+        "fen": "",
+        "solution": [],
+        "comment": "<p>A következő kombináció (ld. a 32. ábrát) a Leningrád bajnokságon történt. Világos lép. Indíték – nyitott az 1., 2. és " +
+          "3. mező. Ebben a helyzetben még nincs kombináció, de a világos ezt elő akarta készíteni válaszul az ellenfél következő hibás " +
+          "lépésére. Például, a 14-19 lépésre. Mivel itt sem találta az ötletet, a következőt tette: gondolatban feláldozott korongot a 20-14 " +
+          "lépéssel. A sötét kénytelen leütni 19x10 (másképp azonnal veszít egy korong). És világos már ebben a pozícióban el kezdte keresni az " +
+          "ötletet. Most ez szembetűnő – ez a 25. korong ütése az 1. mezőre. Technikai fogás – a 27. sötét korong áthelyezése a 20. mezőre. " +
+          "Hogy ezt a fogást teljesíthessük, világos meg tudja tenni az előkészítő lépést. Ezt is találjuk meg. És a következő történt: " +
+          "1… 48-42! 14-19?; 2. 20-14! 19x10; 3. 37-32 27x38; 4. 29-24 38x20; 5. 25x1, és sötét feladta.</p>" +
+          "<p>A 33. ábrán pedig (a következő oldalon) sötét lép. Látjuk, hogy a 23-28 lépése után, és a 43-39 világos válasza esetén, feltűnik " +
+          "az indíték a kombinációhoz – kényelmes sötét ütéséhez a 38., 39. és 40. világos korongok elhelyezkedése. De az ütés " +
+          "végrehajtásához sötétnek be kell kerülnie (szinten ütéssel) a 25. vagy a 32. mezőre. Hogyan lehet ezt megvalósítani?</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Ogorodnyikov– Giljarov, 1956</span></p>"
+      },
+      {
+        "id": 34,
+        "fen": "",
+        "solution": [],
+        "comment": "<p></p>"
+      },
+      {
+        "id": 35,
+        "fen": "",
+        "solution": [],
+        "comment": "<p></p>"
+      },
+      {
+        "id": 36,
+        "fen": "",
+        "solution": [],
+        "comment": "<p></p>"
+      },
+      {
+        "id": 37,
+        "fen": "",
+        "solution": [],
+        "comment": "<p></p>"
+      },
+      {
+        "id": 38,
+        "fen": "",
+        "solution": [],
+        "comment": "<p></p>"
       }
     ];
 

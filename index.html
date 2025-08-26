@@ -154,7 +154,7 @@
 
     <a class="behuzas" href="#MasodikFejezet">MÁSODIK FEJEZET.</a> A kombinációs meglepetésekről<br>
     <a href="#MitJelentAKombinacio">Mit is jelent a kombináció?</a><br>
-    <a href="#InditokOtletekTechnikaiFogasok">Indíték, ötlet, technikai fogás</a><br>
+    <a href="#InditekOtletTechnikaiFogas">Indíték, ötlet, technikai fogás</a><br>
     <a href="#KombinaciokVilaga">A dámajátékos kombinációk világa</a><br>
     <a href="#KombinaciokAMegkulonboztetoSzabalyokra">Kombinációk a megkülönböztető szabályokra</a><br>
     <a href="#TipikusUtesek">Tipikus ütések</a>
@@ -986,7 +986,7 @@
       },
       {
         "id": "29",
-        "fen": "W:W27,28,32,37,43:B10,15,17,19",
+        "fen": "B:W17,26,27,30,35,38,43,50:B3,6,9,13,16,19,20,24",
         "solution": ["16-11", "6x17", "28-22", "17x28", "25-20", "14x25", "34-29", "23x34", "32x5"],
         "comment": "<p>Újabb példa a 28. ábrán. Az már tudjátok, hogyan lehet a sötét korongot a 28. mezőre csalni. De most már nem " +
           "lehet leütni 32x5 – zavarnak a 14. és a 23. sötét korongok. De vajon rá lehet-e kényszeríteni az ellenfelet, hogy eltávolítsa " +
@@ -1001,8 +1001,51 @@
           "bemutatásával. Jelen fejezet megtanulása céljából javasoljuk a következőt: először helyezzük fel az ábrán lévő pozíciót a táblára " +
           "és játsszuk le az utasításnak megfelelően. Azután újra rakjuk fel a korongokat az ábra szerint és néhányszor, a korongok " +
           "megmozdítása nélkül, gondolatban ismételjük át az egész kombinációt. És amikor már tisztán el tudjuk képzelni a döntő ütést végző " +
-          "korong teljes útját, valamint a táblán maradó korongok elhelyezkedését, akkor térhetünk a következő ábrához.</p>"+
+          "korong teljes útját, valamint a táblán maradó korongok elhelyezkedését, akkor térhetünk a következő ábrához.</p>" +
           "<p class=\"kozepre\"><span class=\"felkover\">Kovrizskin – Bárszkij, 1957</span></p>"
+      },
+      {
+        "id": "30",
+        "fen": "B:W26,27,28,32,33,34,35,38,39,41,42,48,49:B1,2,3,8,9,12,13,16,17,19,23,24,25",
+        "solution": [],
+        "comment": "<p>A 29. ábrán lévő pozícióban sötét lép. Neki sokkal rosszabb az állása: a 17. világos korong ellenőrzés alatt tartja " +
+          "sötét rövid szárnyát, a 19., 20. és 24. korongjai a hosszú szárnyon egyelőre nem tudnak lépni – a 20-25 lépésre következik 17-12, " +
+          "és a világos áttör a dámába. És mégis sötét előkészített egy kombinációt. Lépett 1…. 13-18! Világos, mintha hipnózisban volna, " +
+          "válaszolt 2. 43-39? Azután jön a meglepetés: 2…. 19-23! 3. 30x28 18-23; 4. 28x19 9-13; 5. 19x8 3x34. És sötét korongjának ilyen " +
+          "ütése után világos feladta. Ebben az esetben a kombináció nemcsak megmentette sötétet a vereségtől, hanem győzelmet is hozott neki. " +
+          "Miért volt itt lehetséges a kombináció? Nincsenek itt a korongok elhelyezésben valami különös ismertetőjelek, amelyek alapján ki " +
+          "lehetett deríteni a kombináció lehetőségét és megkezdeni keresését és előkészítését? Kétségtelen, vannak! Nézzük meg a 29. ábrát. " +
+          "Világos 43-39? lépése után a 17., 27., 38. és 39. korongok mintha felkínálkoznának, hogy a 3. sötét korong leüsse őket. Csak át " +
+          "kell dobni hozzájuk egy hidacskát – felállítani egy másik világos korongot a 8. mezőre. Észrevéve, hogy oda mehet a 30. korong, " +
+          "sötét neki is készülődött – lépett a 13-18! (arra az esetre, ha a világos lép 43-39 vagy a 38-33). Túlbecsülve saját pozíciós " +
+          "előnyét, világos nem fordított szükséges figyelmet a fent említett korongok gyenge – kombinációs szempontból – elhelyezésére és " +
+          "megfizetett ezért a figyelmetlenségért. A továbbiakban egy helyzetet, ahol a korongok ilyen gyenge kombinációs elhelyezéssel " +
+          "állnak, <span class=\"felkover\">kombinációs gyengeségnek</span> fogjuk nevezni (ellentétben a pozíciós gyengeséggel, amiről " +
+          "később beszélünk). A különböző kombinációs gyengeségek – éppen azok az ismertetőjelek, amelyek alapján feltételezhetjük a " +
+          "kombináció létezését.</p>" +
+          "<h4 class=\"InditekOtletTechnikaiFogas\">Indíték, ötlet, technikai fogás</h4>" +
+          "<p>Hogyan kell megkeresni a kombinációt? Milyen szakaszokra lehet felosztani a keresést (az egyszerűsítés kedvéért)? Térjük vissza " +
+          "a 29. ábrához. Figyelmesen megtekintve ezt a pozíciót, megtaláljuk az ellenfél korongjai elhelyezkedésében a kombinációs gyengeséget " +
+          "(vagy ugyanazt a várható lépése után). Jelen esetben ez a gyengeség – a 17., 27., 38. és 39. (az előrelátható 43-39 lépés után) " +
+          "korongok elhelyezkedése. Ez alkalom arra, hogy keressünk kombinációt, vagy, ahogyan a továbbiakban említjük, ez az " +
+          "<span class=\"felkover\">indíték.</span></p>" +
+          "<p>Ezután felfedezzük azt a döntő ütést, amely felhasználja a megtalált indítékot. Ebben az esetben ez a 3x34 ütés. Az ilyen végső " +
+          "ütést a kombináció ötletének nevezik. Azért csak ötletnek, mert valójában az ütés a táblán még nem létezik – nekünk ehhez csak a " +
+          "gondolata van (ötlet), hogyan lehet ezt megvalósítani. Ehhez, persze, még rá kell kényszeríteni az ellenfelet némelyik korongja " +
+          "áthelyezésére – néhányat felállítani úgy, hogy döntő ütést végezhessünk, másokat pedig eltávolítani a mezőkről, hogy ne zavarjanak. " +
+          "Ezt elérhetjük lecserélések vagy áldozatok segítségével.</p>" +
+          "<p>A döntő ütéséhez való készülődés során a felhasznált áldozatokat vagy cseréket a kombináció technikai fogásának nevezik. A mi " +
+          "példánkban az ötlet megvalósulásához a világos korongot be kellett hozni a 8. mezőre. Erre találtak megfelelő technikai " +
+          "fogást: 19-23; 30x28 18-23; 28x19 9-13, és a 30. világos korong a 8. mezőre lép. Tehát, kombinációt így keresünk: észrevesszük az " +
+          "indíték létezését, ez alapján keressük a kombináció ötletét – a befejező ütést – és ezután igyekszünk megtalálni a technikai fogást. " +
+          "Ha a pozícióban van kombináció, az azt jelenti, hogy feltétlenül léteznek ezek az elemek – indíték, ötlet és a technikai fogás. " +
+          "Megfelelő gyakorlat után egy játszma alatt elég könnyen észre fogjátok venni az indíték létezését, megtaláljátok az ötletet és a " +
+          "technikai fogást is.</p>" +
+          "<h4 class=\"KombinaciokVilaga\">A DÁMAJÁTÉK KOMBINÁCIÓK VILÁGA</h4>" +
+          "<p>És most – figyelem! Indulunk a váratlan és lenyűgöző kombinációk csodálatos világába! Ezeknek a kombinációnak az elemzése, " +
+          "kétségtelen, mindenkinek elégedettséget okoz. Meg fogjátok érteni, mennyire érdekes és szép a száznégyzetes dámajáték. A " +
+          "kombinációk elemzése – nagyon fontos lépés a jövendő sikerekhez vezető úton.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Bárszkij – Batalov, 1957</span></p>"//19. Oldal
       }
     ];
 
@@ -1099,13 +1142,15 @@
       }
 
       // 4. DraughtsBoard példány
+      const orientation = pos.fen[0] === 'B' ? 'black' : 'white';
       const config = {
         draggable: true,
         position: pos.fen,
         onDragStart: onDragStart,
         onDrop: onDrop,
         onSnapEnd: onSnapEnd,
-        pieceTheme: 'unicode'
+        pieceTheme: 'unicode',
+        orientation: orientation
       };
       // Tároljuk a boardokat, ha kell később
       window.boards = window.boards || [];

@@ -875,7 +875,7 @@
       {
         "id": "19",
         "fen": "W:WK8,25:B10,19,29,K30,31,32",
-        "solution": [["25x5", "8x36"]],
+        "solution": ["25x5", "8x36"],
         "comment": "<p>A világos lép. Látjuk, hogy három különböző ütési lehetősége van: <br>1. 25x34x23x14x5 (leszedünk négy korongot), " +
           "<br>2. 8x24x35 (leszedünk két korongot), vagy <br>3. 8x24x33x47 (leszedünk három korongot). <br>Tehát a többségi szabály " +
           "értelmében a világos köteles azt az ütőlépést választani, amellyel négy korongot vesz le, vagyis 25x5. Amikor egyforma számú " +
@@ -943,13 +943,66 @@
           "önállóan! (Segítségül: itt is lesz török ütés, szomorú következményekkel a sötét számára).</p>" +
           "<h3 id=\"ujoldal\"><i id=\"MasodikFejezet\">MÁSODIK FEJEZET</i></h3>" +
           "<h3 class=\"felkover\">A KOMBINÁCIÓS MEGLEPETÉSEKRŐL</h3>" +
-          "<h4>MIT IS JELENT A KOMBINÁCIÓ?</h4>" +
+          "<h4 id=\"MitJelentAKombinacio\">MIT IS JELENT A KOMBINÁCIÓ?</h4>" +
           "<p>A győzelem egy partiban nem véletlenül születik. Azt elő kell készíteni. A győzelemhez vezető hosszú úton előbb előnyt " +
           "kell szerezni. Előny lehet: az erőviszonyokban – korong-többlet, dáma; a pozícióban – a mi korongjaink elhelyezkedése jobb, " +
           "mint az ellenfélé. Viszont az ellenfél is igyekszik elérni ugyanezt és igyekezni fog olyan lépéseket tenni, amelyek neki " +
           "kedvezőek. De milyen eszközök léteznek ahhoz, hogy <span class=\"felkover\">kényszerítsük</span> az ellenfelet úgy lépni, " +
           "ahogy nekünk kell, kényszerítsük őt úgy elhelyezni a korongjait, ahogy mi kívánjuk? Ezeknek az eszközöknek egyike – az ütési " +
           "kötelezettség szabályának a felhasználása. Íme, némi magyarázat.</p>"
+      },
+      {
+        "id": "26",
+        "fen": "W:W27,28,32,37,43:B10,15,17,19",
+        "solution": ["28-22", "17x28", "32x5"],
+        "comment": "<p>A 25. ábrán sötét lépése következik. Rögtön látszik, hogy ha sötét lép 23-28?, akkor a világos üt 32x5 és nyer. " +
+          "De önként sötét nem fog így lépni! </p>"
+      },
+      {
+        "id": "27",
+        "fen": "W:W16,27,28,32,37,43:B3,6,8,10,15,19",
+        "solution": ["16-11", "6x17", "28-22", "17x28", "32x5"],
+        "comment": "<p>A 26. ábrán világos lép. Megint látjuk, hogy ha a sötét korong a 28. mezőn lenne, akkor a 32. világos korong " +
+          "ütött volna 32x5. De hogyan kényszerítsük a sötétet a 28. mezőre lépni? Kiderül, hogy nagyon egyszerű. Lépjünk 1. 28-22! " +
+          "A sötét kénytelen válaszolni 1.…17x28, és utána jön 2. 32x5. </p>" +
+          "<p>Nézzük meg a 27. ábrát. Világos lép. Lehetséges-e kényszeríteni az ellenfelet, hogy állítsa korongját a 28. mezőre, " +
+          "méghozzá úgy, hogy a 10. és 19. korongjai helyben maradnak? Természetesen, lehet. Könnyű kitalálni, hogy világosnak " +
+          "1. 16-11 kell lépni! A sötét üt 6x17. Világosnak célszerű újra feláldozni egy korongját: 2. 28-22, sötét üt 17x28, és világos " +
+          "elérte célját: 3. 32x5.</p>"
+      },
+      {
+        "id": "28",
+        "fen": "W:W16,25,27,28,32,34,37,43,44,45:B2,3,4,6,8,10,14,18,19,23",
+        "solution": [//A lépések sorrendje miatt több megoldás van
+          ["16-11", "6x17", "28-22", "17x28", "25-20", "14x25", "34-29", "23x34", "32x5"],
+          ["16-11", "6x17", "25-20", "14x25", "28-22", "17x28", "34-29", "23x34", "32x5"],
+          ["16-11", "6x17", "25-20", "14x25", "34-29", "23x34", "28-22", "17x28", "32x5"],
+          ["16-11", "6x17", "34-29", "23x34", "25-20", "14x25", "28-22", "17x28", "32x5"],
+          ["25-20", "14x25", "34-29", "23x34", "16-11", "6x17", "28-22", "17x28", "32x5"],
+          ["25-20", "14x25", "16-11", "6x17", "34-29", "23x34", "28-22", "17x28", "32x5"],
+          ["25-20", "14x25", "16-11", "6x17", "28-22", "17x28", "34-29", "23x34", "32x5"],
+          ["34-29", "23x34", "25-20", "14x25", "16-11", "6x17", "28-22", "17x28", "32x5"],
+          ["34-29", "23x34", "16-11", "6x17", "25-20", "14x25", "28-22", "17x28", "32x5"]]
+      },
+      {
+        "id": "29",
+        "fen": "W:W27,28,32,37,43:B10,15,17,19",
+        "solution": ["16-11", "6x17", "28-22", "17x28", "25-20", "14x25", "34-29", "23x34", "32x5"],
+        "comment": "<p>Újabb példa a 28. ábrán. Az már tudjátok, hogyan lehet a sötét korongot a 28. mezőre csalni. De most már nem " +
+          "lehet leütni 32x5 – zavarnak a 14. és a 23. sötét korongok. De vajon rá lehet-e kényszeríteni az ellenfelet, hogy eltávolítsa " +
+          "őket onnan? Igen, lehet. Amikor lépünk 25-20, sötét kénytelen lesz elhagyni a 14. mezőt, és a következő 34-29 lépés után szabad " +
+          "lesz a 23. mező is, vagyis mindent előkészítettünk a 32x5 ütéshez. Tehát, játsszuk az 1. 16-11! 6x17; 2. 28-22! 17x28; " +
+          "3. 25-20 14x25; 4. 34-29 23x34; 5. 32x5. Ezen a példán látjuk, hogy felhasználva a kényszerütési szabályt, rá tudjuk venni az " +
+          "ellenfelet, hogy a saját korongjait úgy helyezze el, ahogyan akarjuk. Így később egy ütéssel döntő pusztítást végzünk az ellenfél " +
+          "táborában. Az ilyen cselfogást nevezik <span class=\"felkover\">kombinációnak.</span></p>" +//18. Oldal
+          "<p>Elmondhatjuk, hogy a száznégyzetes dámajátékban nagyon sok parti kombináció segítségével dől el, nem is szólva azokról a " +
+          "kombinációkról, amik mintha kimaradtak volna, mert az ellenfél időben észrevette a veszélyt és nem tett rossz lépést. Egyszóval, " +
+          "a száznégyzetes dámajátékban a játék középpontja jóval el van tolva a kombináció irányába. Ezért is kezdjük a könyvet kombinációk " +
+          "bemutatásával. Jelen fejezet megtanulása céljából javasoljuk a következőt: először helyezzük fel az ábrán lévő pozíciót a táblára " +
+          "és játsszuk le az utasításnak megfelelően. Azután újra rakjuk fel a korongokat az ábra szerint és néhányszor, a korongok " +
+          "megmozdítása nélkül, gondolatban ismételjük át az egész kombinációt. És amikor már tisztán el tudjuk képzelni a döntő ütést végző " +
+          "korong teljes útját, valamint a táblán maradó korongok elhelyezkedését, akkor térhetünk a következő ábrához.</p>"+
+          "<p class=\"kozepre\"><span class=\"felkover\">Kovrizskin – Bárszkij, 1957</span></p>"
       }
     ];
 
@@ -961,6 +1014,14 @@
         commentDiv.style.margin = '0 0 20px 0';
         document.getElementById('boards').appendChild(commentDiv);
       }
+
+      // ID kiírása a tábla mellé (pl. fölé)
+      const idDiv = document.createElement('div');
+      idDiv.textContent = pos.id + '.';
+      idDiv.style.textAlign = 'center';
+      idDiv.style.fontSize = '1.17em';
+      idDiv.style.marginBottom = '5px';
+      document.getElementById('boards').appendChild(idDiv);
 
 
       // 1. Tábla div létrehozása
@@ -975,6 +1036,7 @@
       // 2. Draughts példány és megoldás
       const game = new Draughts(pos.fen);
       let moveCount = 0;
+      let chosenSolutionIdx = null; // ide mentjük, melyik solution ágat választotta a felhasználó
 
       // 3. Eseménykezelők
       function onDragStart(source, piece, position, orientation) {
@@ -986,16 +1048,31 @@
       }
       function onDrop(source, target) {
         var legal = game.moves();
-        let currentSolution = pos.solution[moveCount];
-        let goodMoves = Array.isArray(currentSolution) ? currentSolution : [currentSolution];
-        // A megadott több jó megoldások közül nézi meg, hogy a lépés jó-e
-        let isGood = goodMoves.some(sol => {
-          let [from, to] = sol.split(/[-x]/);
-          return source == from && target == to;
-        });
+        // Több megoldás-ág esetén minden lépésnél keresd, melyik ággal egyezik a felhasználó eddigi lépéssorozata!
+        let solutions = Array.isArray(pos.solution[0]) ? pos.solution : [pos.solution];
+        let matchingIdx = null;
+
+        // Végigmegyünk az összes solution ágon, és megnézzük, hogy az eddigi lépéssorozat + mostani lépés egyezik-e bármelyikkel
+        for (let i = 0; i < solutions.length; i++) {
+          let sol = solutions[i];
+          if (!sol || !sol[moveCount]) continue;
+          let [from, to] = sol[moveCount].split(/[-x]/);
+          if (source == from && target == to) {
+            matchingIdx = i;
+            break;
+          }
+        }
+        // Ha egyik sem jó, akkor snapback
+        if (matchingIdx === null) return 'snapback';
+
+        // Most már csak a kiválasztott solution ágat követjük
+        let currentSolution = solutions[matchingIdx];
+        let goodMove = currentSolution[moveCount];
+        let [goodFrom, goodTo] = goodMove.split(/[-x]/);
+
         // Keresd meg a lehetséges lépések között a megfelelőt!
         var found = legal.find(m => m.from == source && m.to == target);
-        if (!found || !isGood) {
+        if (!found || !(source == goodFrom && target == goodTo)) {
           return 'snapback';
         }
         var move = game.move(found);
@@ -1004,23 +1081,19 @@
         } else {
           moveCount += 1;
           // Automatikus válasz, ha van még lépés
-          if (moveCount < pos.solution.length) {
-            let nextSol = pos.solution[moveCount];
-            let nextMoves = Array.isArray(nextSol) ? nextSol : [nextSol];
-            // Végigmegyünk az összes megoldáson, és az első szabályos lépést választjuk
-            let blackMove = null;
-            for (let sol of nextMoves) {
-              let [from, to] = sol.split(/[-x]/);
-              blackMove = game.moves().find(m => m.from == from && m.to == to);
-              if (blackMove) break;
-            }
+          if (moveCount < currentSolution.length) {
+            let next = currentSolution[moveCount].split(/[-x]/);
+            let blackMove = game.moves().find(m => m.from == next[0] && m.to == next[1]);
             if (blackMove) {
               game.move(blackMove);
               moveCount += 1;
             }
           }
+          // Frissítsd a választott ágat!
+          chosenSolutionIdx = matchingIdx;
         }
       }
+
       function onSnapEnd() {
         boards[idx].position(game.fen());
       }

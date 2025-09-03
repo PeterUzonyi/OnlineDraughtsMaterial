@@ -3496,8 +3496,8 @@
       },
       {
         "id": "287",
-        "fen": "W:W:B",
-        "solution": [""],
+        "fen": "W:W48:B15",
+        "solution": ["48-43", "15-20", "43-39", "20-24", "39-34"],
         "comment": "<p>Ezzel zárjuk be a kombinációkról szóló fejezetet. Itt megismertettünk titeket a tipikus kombinációs ütésekkel és " +
           "különböző kombinációs ötletekkel, beszéltünk a fogásokról, amelyek segítségével ezek az ötletek megvalósulnak a partikban, " +
           "valamint adtunk némi elképzelést a csapdákról.</p>" +
@@ -3560,25 +3560,49 @@
           "távoli ütésekhez lehet felhasználni. Ezért játék közben, amikor sok a kombinációs lehetőség, ellépni a 3. mezőről veszélyesebb, mint " +
           "bármelyik másikról, ebből a sorból. Ha pedig a 3. mező üres lesz, gyakrabban leszünk kénytelenek elhárítani az ellenfél kombinációs fenyegetéseit.</p>" +
           //71. Oldal
-          "<p></p>" +
-          "<p></p>" +
-          "<p></p>" +
-          "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+          "<p>Tehát, arra a következtetésre jutottunk, hogy a táblán nem minden mező egyforma értékű, és hogy a korongok ereje játék közben attól " +
+          "függ, melyik mezőt foglalják el.</p>" +
+          "<p>Most pedig nézzünk néhány példát, amelyek megerősítik következtetéseinket. Íme, az első példa (lásd a 287. ábrát.):</p>"
       },
       {
         "id": "288",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "B:W48:B12",
+        "solution": ["12-18", "48-43", "18-23", "43-39", "23-29"],
+        "comment": "<p>Ha a fenti pozícióban világos lép, akkor könnyen nyerhet: 1. 48-43 15-20; 2. 43-39 és sötét bármilyen válaszára 3. " +
+          "39-34 következik. És mi lesz, ha elsőként sötét lép? – 1. … 15-20. Ha most világos a sötét korong felé lépeget, akkor veszít " +
+          "(2. 48-43 20-24; 3. 43-39? 24-20). Viszont a világos korong értékesebb mezőn tartózkodik, mint a sötét (mert a 48. mezőről " +
+          "bármelyik szárnyra mehet, a másik pedig, amelyik a 15. mezőről indul, kevesebb mezőt érhet el. Ezt kihasználva, a 48. korong a " +
+          "másik irányba mozdul és kitér a sötét korong elől. Világos döntetlent ér el: (1. … 15-20);  2. 48-42 20-24; 3. 42-37 24-29; " +
+          "4. 37-31 stb. Így már érthető, hogy a 48. mező értékesebbnek bizonyult, mint a 15. mező? Amikor világos kezdett, és hasznos volt " +
+          "számára a találkozás a sötét koronggal, vele szemben lépett és nyert. Viszont, amikor ugyanebben a pozícióban sötét kezdett, világos " +
+          "el tudta kerülni a találkozást és döntetlent ért el a partiban. Tehát, látjátok, hogy a peremes mező azért sem olyan értékes, mint a " +
+          "központi mező, mert a peremes korong szükség esetén nem tud átjutni a másik szárnyra, ugyanakkor a központi mezőről a korongot át " +
+          "lehet irányítani több helyre is a táblán. Tényleg, nézzük csak a következő, 288-as ábrát.</p>"
       },
       {
         "id": "289",
+        "fen": "W:W33:B23",
+        "solution": [""],
+        "comment": "<p>A 287. ábrától ez a pozíció csak abban különbözik, hogy a sötét korong a 15. peremes mező helyett a 12-es központi " +
+          "mezőt foglalja el. Ez rögtön meg is mutatkozik az eredményen. Ha elsőként sötét lép, akkor neki előnyös a világos koronggal való " +
+          "találkozás, és kényszerítheti világost: 1. … 12-18!; 2. 48-43 18-23; 3. 43-39 (3. 43-38 23-28) 23-29; illetve 2. 48-42 18-22 stb., " +
+          "és mindkét esetben győzelmet szerez. Az előző példával érintjük az <span class=\"felkover\">oppozíció</span> kérdését. <span class=\"felkover\">" +
+          "Oppozíció (szembenállás) – olyan helyzet, amikor két különböző színű korong egy függőleges vonalon tartózkodik</span> (lásd a következő, 289. ábrát).</p>"
+      },
+      {
+        "id": "290",//72. Oldal
+        "fen": "W:W43:B13",
+        "solution": [""],
+        "comment": "<p>A játékosról, amely olyan lépést tesz, ami után oppozíció keletkezik, mondják, hogy <span class=\"felkover\">elfoglalta az " +
+          "oppozíciót</span>, vagy birtokba vette az oppozíciót. Itt sötét lép, ezek szerint az oppozíciót világos foglalta el, mert éppen ő " +
+          "tette meg az utolsó lépést (legyen ez, mondjuk, 38-33), ami után létre is jött az oppozíció. Elfoglalni az oppozíciót – előnyt jelent, " +
+          "mert ezzel kényszerítjük az ellenfelet a következő lépésében ütésbe tenni a korongját. Tehát, ha mindkét félnek egy-egy korongja maradt, " +
+          "akkor az győz, aki el tudja foglalni az oppozíciót. A 289. ábrán lévő oppozíciót <span class=\"felkover\">rövid</span> oppozíciónak " +
+          "nevezik, és ha a korongok egy függőleges vonalon vannak, de távolabb egymástól (lásd a következő, 290-es ábrát), akkor az ilyen " +
+          "oppozíciót <span class=\"felkover\">távoli</span>nak nevezik.</p>"
+      },
+      {
+        "id": "291",
         "fen": "W:W:B",
         "solution": [""],
         "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
@@ -3587,7 +3611,79 @@
           "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
       },
       {
-        "id": "290",
+        "id": "292",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "293",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "294",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "295",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "296",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "297",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "298",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "299",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "300",
         "fen": "W:W:B",
         "solution": [""],
         "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +

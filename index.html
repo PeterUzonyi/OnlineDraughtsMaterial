@@ -3493,12 +3493,48 @@
         "solution": ["12-17", "35-30", "17x37", "30x8", "18-22", "27x29", "9-13", "8x19", "14x32"],
         "comment": "<p>279. ábra. Sötét 1. … 12-17! lépése után az ellenfél miért nem válaszolhatott 2. 35-30?, hogy üssön 3. 30x8?</p>" +
           "<p class=\"kozepre\"><span class=\"felkover\">Rjabov – Kogan, 1956</span></p>"
-      },//68. Oldal
+      },
       {
-        "id": "287",//71. Oldal
+        "id": "287",
         "fen": "W:W:B",
         "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+        "comment": "<p>Ezzel zárjuk be a kombinációkról szóló fejezetet. Itt megismertettünk titeket a tipikus kombinációs ütésekkel és " +
+          "különböző kombinációs ötletekkel, beszéltünk a fogásokról, amelyek segítségével ezek az ötletek megvalósulnak a partikban, " +
+          "valamint adtunk némi elképzelést a csapdákról.</p>" +
+          "<p>Hogy erős dámajátékossá váljatok, mindezt tudnotok kell, és a legfontosabb, hogy minél többször gyakoroljátok a partikban " +
+          "előforduló kombinációk önálló megfejtését. Ily módon lehet kifejleszteni bennünk a kombinációs látást és a képességet a mély " +
+          "számításokhoz a táblán lévő korongok mozdítása nélkül.</p>" +
+          "<p>Miben rejlik a kombináció kiszámításának a nehézsége? Hát abban, hogy a számításkor néha ott kell „látni” korongokat a táblán, " +
+          "ahol nincsenek, és néha nem látni azokat, amelyek vannak! És ezek a tulajdonságok megszerezhetők gyakorlással.</p>" +
+          "<h3 id=\"ujoldal\"><i id=\"HarmadikFejezet\">HARMADIK FEJEZET</i></h3>" +//69. Oldal
+          "<h3 class=\"felkover\">POZÍCIÓ – A JÁTÉK ALAPJA</h3>" +
+          "<h4 id=\"KorongokMezokErteke\">A KORONGOK ÉS A MEZŐK ÉRTÉKÉRŐL</h4>" +
+          "<p>Első látásra úgy tűnik, hogy minden korong (itt tételezzük fel, hogy a táblán csak gyalogok vannak, vagyis még nem beszélünk " +
+          "dámákról) ugyanolyan értékkel rendelkezik, hiszen mindegyik azonos szabályok szerint mozog. De könnyű megmutatni, hogy ez nem így van.</p>" +
+          "<h3>280.<img src=\"./images/280.png\" alt=\"Irányok száma\"></h3>" +
+          "<p>A 280. ábrán, például, két korong van – a 26. peremes és a 28. központi. Hasonlítsuk össze az értéküket. A peremes 26. korong sima " +
+          "lépésként csak egy irányba tud mozogni – 26-21, ugyanakkor a 28. korong választhat két sima lépés közül: 28-22 vagy 28-23. A 26. " +
+          "korong két irányba üthet (egyet előre vagy egyet hátra), a 28. korong pedig négy irányba üthet (kettőt előre vagy kettőt hátra). " +
+          "A fentiekből látszik, hogy a 28. korong értékesebb, vagy ahogy mondani szokták, erősebb a 26. korongnál. De ez még nem minden. " +
+          "Nézzetek a következő, 281. ábrára.</p>" +
+          "<h3>281.<img src=\"./images/281.png\" alt=\"Elérhető mezők száma\"></h3>" +
+          "<p>Hány mezőt tudna elérni a 26. korong? Nem nehéz megszámolni, hogy csak 11 mezőt (21., 16., 17., 11., 12., 6., 7., 8., 1., 2., 3.). " +
+          "És hány mezőre juthatna a 28. korong? 19-re! Ez szintén arról tanúskodik, hogy a korong, amely a 26. mezőt foglalja el, bizony " +
+          "gyengébb, mint a korong a 28. mezőn.  Mi szándékosan választottunk két olyan korongot, amelyek azonos vízszintes vonalon állnak, " +
+          "hogy a lehetőségük értékeléskor ne befolyásoljon az a körülmény, hogy az egyik korong közelebb áll a dámamezőhöz, vagyis gyorsabban " +
+          "tud dámává válni, mint a másik. Tehát, még azok a korongok, amelyek azonos vízszintes vonalat foglalnak el, sem egyenlő értékűek: " +
+          "mindegyiknek az ereje attól függ, melyik mezőt foglalja el. Ily módon, maguk a dámatábla mezők sem egyenlő értékűek. Némelyiket " +
+          "igyekezni kell minél hamarabb elfoglalni, másokat sajnálat nélkül el lehet hagyni. Olyanok is vannak, amelyeket hasznos megtartani " +
+          "minél tovább. Világos, hogy nincs, és nem is lehet kész recept, ahol elő van írva, hogy bizonyos mezőket mindig el kell foglalni, " +
+          "és ez biztosít nyerést a partiban, vagy legalább pozíciós előnyt. Ez a kérdés elég bonyolult. Még ugyanazon mező értéke sem mindig " +
+          "egyforma; néha nagyon is ingadozik és vagy nagyobb, vagy kisebb lehet, ami több okból kifolyólag függ – a játszma stádiumától " +
+          "(eleje, közép- vagy végjáték), a saját korongok vagy az ellenfél korongjainak elhelyezkedésétől, a lépés sorától stb. Viszont, " +
+          "ismernünk és értenünk kell az úgynevezett általános elképzeléseket, amelyek alapján egy mezőt erősebbnek tekintenek, mint a másikat. " +
+          "Ti már láttátok, a központi mezők (például, a 28.) miért értékesebbek, mint a peremesek (például, a 26.). Most hasonlítsuk össze " +
+          "az első sor mezőinek értékét, és következésképpen az ott elhelyezett korongok erejét is. Vegyük számba sötét táborát (282. ábra).</p>" +
+          "<h3>281.<img src=\"./images/281.png\" alt=\"Elérhető mezők száma\"></h3>" +//70. Oldal
+          "<p></p>" +
+          "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
           "ötletek és a technikai fogások?</p>" +
           "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
           "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"

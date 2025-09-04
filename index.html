@@ -4504,9 +4504,9 @@
       },
       {
         "id": "345",//90. Oldal
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ha figyelmesen megnézzük a pozíciót a 345. ábrán, ami az előző oldalon látható, akkor látjuk, hogy a 12. korong " +
+        "fen": "W:W26,28,29,32,33,34,36,39,40,41,42,45,47,49:B2,4,6,7,8,9,10,12,15,17,18,19,22,25",
+        "solution": ["26-21", "17x26", "28x17", "12x21", "32-27", "21x32", "41-37", "32x41", "42-37", "41x32", "29-23", "18x38", "39-33", "38x29", "34x1"],
+        "comment": "<p>Ha figyelmesen megnézzük a pozíciót a 345. ábrán, akkor látjuk, hogy a 12. korong " +
           "eltávolítása után a sötétnél alakul egy rosta. Ezt nem nehéz megtenni, de lehetséges-e azután kombináció? Itt is, szokás szerint, " +
           "a rosta nem ejt át! A világos ilyen kombinációt hajtott végre: 1. 26-21! 17x26; 2. 28x17 12x21. A rosta megvan! És íme, maga a " +
           "kombináció: 3. 32-27! 21x32; 4. 41-37! 32x41; 5. 42-37 41x32; 6. 29-23 18x38; 7. 39-33 38x29; 8. 34x1, és a világos győzelemre " +
@@ -4515,21 +4515,41 @@
       },
       {
         "id": "346",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "B:W24,26,29,32,33,34,36,39,41,42,43,48:B2,4,6,8,9,12,13,15,16,18,22,25",
+        "solution": ["9-14", "41-37", "14-19", "32-28", "19x30", "28x17", "12x21", "26x17", "4-9", "42-38", "18-23", "29x18", "13x11"],
+        "comment": "<p>A 346. ábrán lévő helyzetben a világos lépett 1. 38-32?,  igyekezve elfoglalni a centrumot. Ez ellen általában nincs " +
+          "kifogás. De kellett volna figyelembe venni, hogy jelen konkrét pozícióban e lépés után alakult rosta a 32., 41., 42., 43. világos " +
+          "korongokból. Ezért kellett volna előre gondolni, hogy az ellenfél nem tudná-e felhasználni ezt a gyengeségét. És mégpedig: 1) nem " +
+          "jelenik-e nála azonnali lehetőség a kombinációhoz?, és 2) nem teremt-e fenyegetését, amelyet muszáj lesz elhárítani, és ez a csata " +
+          "nem adja-e az ellenfél kezébe a kombinációt? Nyilvánvaló, a világos nem gondolta át – és ez lett a következménye: 1. … 9-14! A sötét " +
+          "fenyeget, hogy belép a 19. mezőre és megnyeri a 24. korongot. Ha a világosnak nem lenne rostája, akkor ilyen fenyegetés sem lenne, " +
+          "mert maga a 9-14 lépés lehetetlen lett volna a 24-20 válasz miatt. Most viszont kiderült, hogy elhárítani fenyegetést a 24-20 úton a " +
+          "világos nem tudja, mert a 24-20 15x24; 29x9 után lesz a 22-28! (a rostát felhasználva!), és a sötét válogathat is, hogy hova állítsa " +
+          "fel a dámát – a 47. vagy a 49. mezőre. Mindkét esetben neki, természetesen, könnyű győzelme lesz. A világos nem tudja elhárítani a " +
+          "fenyegetését a 32-28 úton sem, mert a 14-20!; 28x17 12x21; 26x17 18-23; 29x9 20x49! Ha most a 9-3, akkor a 49-43!; 3x12 25-30 és " +
+          "43x1. A világos kénytelen volt beletörődni a korong elvesztésével. 2. 41-37 14-19; 3. 32-28 19x30; 4. 28x17 12x21; 5. 26x17 4-9; " +
+          "6. 42-38 18-23; 7. 29x18 13x11, és a sötét nyert.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">  Levinson – Szuplin, 1956</span></p>"
       },
       {
-        "id": "347",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "id": "347",//91. Oldal
+        "fen": "W:W15,25,27,28,32,33,34,35,38,39,46,47,50:B3,4,9,10,11,13,14,16,17,18,19,21,26",
+        "solution": ["35-30", "3-8", "30-24", "19x30", "25-20", "14x25", "28-22", "17x37", "47-41", "21x43", "39x48", "30x28", "41x5"],
+        "comment": "<p>A megszemlélt példákból jól látható, hogy mennyire kockázatos nem figyelni a veszélyekre, amelyek a rosta keletkezéséhez vezetnek.</p>" +
+          "<h4 id=\"ujoldal\"><span id=\"NyitottDamamezok\">NYITOTT DÁMAMEZŐK</span></h4>" +
+          "<p>A nyitott dámamezők szintén gyarapítják az ellenfél kombinációs lehetőségeit. Hiszen ha kombináció nem a dámába jutással végződik, " +
+          "akkor a végrehajtásakor kevesebb korongot áldoznak fel, mint szereznek. Ha pedig a kombináció előre látja a dáma megszerzését, ilyenkor " +
+          "lehet egy-két koronggal többet engedni, mint szerezni. Világos, hogy ha a kombináció során több korongot lehet feláldozni, akkor ezt " +
+          "könnyebb megtenni. Ez pedig a kiegészítő kombinációs lehetőségekről tanúskodik a nyitott dámamezők esetén. A kombinációs veszély " +
+          "növekszik, ha a nyitott dámamező mellett (átlósan) van egy korong. Ez lehet az utolsó lépcsőfok az ellenfél dámabemenésén az ütés " +
+          "alatt. Éppen ezért különösen figyelmesnek kell lenni ebben a pillanatban, amikor bármilyen korong elhagyja a dámamezőt. Először " +
+          "megnézünk néhány példát a 3.(48.) nyitott dámamezővel. Már mondtuk, hogy ilyen esetekben hasonló kombináció a legvalószínűbb.</p>" +
+          "<p>347. ábra. Itt a világos kitervelt egy kombinációt arra az esetre, ha az ellenfél megnyitja a 3. mezőt. Hogy elcsábítsa a sötétet " +
+          "erre a lépésre, a világos lépett az 1. 35-30! A sötétnek úgy tűnt, hogy a 3-8 után a következő 19-23 és 13x35 ő fog nyerni egy " +
+          "korongot. Ezért lépett is az 1. … 3-8? Most a 3. mező nyitott, ezzel együtt megnyílt az út a világos kombinációjához! Rövid, de " +
+          "hatásos döntés következett: 2. 30-24! 19x30; 3. 25-20! 14x25; 4. 28-22! 17x37; 5. 47-41!! 21x43; 6. 39x48 30x28; 7. 41x5, és " +
+          "nemsokára a sötét feladta.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Souvag – Geripont, 1954</span></p>"
       },
       {
         "id": "348",

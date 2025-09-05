@@ -5384,7 +5384,8 @@
         "fen": "W:W24,26,50:B4,6,10",
         "solution": [["50-44", "10-14", "44-39", "4-9", "39-33", "9-13", "33-28", "13-18", "26-21", "6-11"],
         ["50-44", "10-14", "44-39", "4-9", "39-34", "9-13", "34-30"],
-        ["24-19", "4-9", "50-44", "10-15", "44-39", "6-11", "26-21", "9-14", "19x10", "15x4", "39-33", "4-9", "33-28", "9-13", "28-23"]],
+        ["24-19", "4-9", "50-44", "10-15", "44-39", "6-11", "26-21", "9-14", "19x10", "15x4", "39-33", "4-9", "33-28", "9-13", "28-23"],
+        ["24-19", "4-9", "50-44", "10-15", "44-39", "6-11", "26-21", "9-14", "19x10", "15x4", "39-34", "4-9", "34-29", "9-13", "29-23"]],
         "comment": "<p>Tehát, a lecserélés átadja hasznát az oppozíciónak, vagyis annak birtoklását a másik félnek. Ezt nagyon fontos tudni. Tényleg, " +
           "amikor látszik, hogy az oppozíció a végjátékban nem a javunkra alakul, akkor meg kell találni a módszert, hogyan cseréljünk.</p>" +
           "<p>402. ábra. Itt még egy példa. A világos számítást végez. Megbizonyosodva, hogy azután az 1. 50-44 10-14; 2. 44-39 4-9; 3. 39-33 " +
@@ -5399,39 +5400,64 @@
       },
       {
         "id": "403",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "W:W26,48:B16,18",
+        "solution": [["48-43", "18-23", "43-39", "23-29"],
+        ["48-42", "18-22", "42-37", "22-27", "26-21", "27-31", "37x26", "16x27"]],
+        "comment": "<p>Figyelmeztetni kell titeket, gyerekek, hogy létezik cserének egy olyan fajtája, amely nem befolyásolja az oppozíciót. " +
+          "Ez az úgy nevezett <span class=\"felkover\">csúszós lecserélés.</span> Nézzük meg, mi ez.</p>" +
+          "<p>A 403. ábrán lévő pozícióban, ha világos játszik az 1. 48-43, akkor veszít az 1. … 18-23; 2. 43-39 23-29 után – oppozíció. " +
+          "De most a világos cserére játszik. 1. 48-42 18-22; 2. 42-37 22-27!; 3. 26-21. A csere biztosítva van…</p>" +
+          "<p>És az eredmény? A 3. … 27-31; 4. 37x26 16x27; után az oppozíció birtokosa nem változik, és a világos megint veszít. Annak " +
+          "az az oka, hogy csúszós lecserélés volt.</p>"
       },
       {
         "id": "404",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "W:W25,43,48:B15,16,33",
+        "solution": [["48-42", "16-21", "42-37", "21-27"],
+        ["43-38", "33x42", "48x37", "16-21", "37-31"]],
+        "comment": "<p>Miért megy át sima csere esetén az oppozíció birtoklása a másik félhez, és a csúszós csere esetén – nem?</p>" +
+          "<p>Megtekintjük ezt a példát – a 404. ábrán. Lépjen a világos 1. 48-42. Akkor a 16-21; 2. 42-37 21-27 után a sötét elfoglalja az " +
+          "oppozíciót. Világos, hogy ha erről az ábráról leszedjük a 15. és a 25. korongot, és ugyanúgy játszunk, akkor az eredmény nem " +
+          "változik. Ha leszedjük a 43. és a 33. korongot is, és újra lépünk 48–42–37, akkor megint a sötét foglalja el az oppozíciót. No " +
+          "de mi változik meg, amikor egyszerű cserét teszünk – 1. 43-38? Mi mintha eltávolítanánk a tábláról a 43. és a 33. korongot, " +
+          "viszont a világossal a 48-37 dupla lépést teszünk, amire a sötét a 16-21 sima lépéssel válaszol. És persze, ha az egyik fél dupla " +
+          "lépést tesz, a másik pedig csak simát, akkor az oppozíció birtoklása átmegy az ellenfélhez. És mi történik csúszós lecseréléskor?</p>"
       },
       {
-        "id": "405",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "id": "405",//109. Oldal
+        "fen": "W:W25,26,27,28:B16,17,19,23,24",
+        "solution": [["26-21", "17x26", "28-22", "23-28", "22x33", "26-31", "27x36", "19-23", "36-31", "16-21", "31-27", "21x32", "33-28", "32-37", "28x30", "37-41"],
+        ["26-21", "17x26", "28-22", "23-28", "22x33", "26-31", "27x36", "19-23", "36-31", "16-21", "33-28", "23x32", "31-27", "21-26", "27x38", "26-31", "38-33",
+          "24-30", "25x34", "31-37", "33-28", "37-42", "34-30", "42-48", "30-25"]],
+        "comment": "<p>Térjük vissza a 403. ábrához. <br>Az 1. 48-42 18-22; 2. 42-37 22-27; 3. 26-21 27-31 lépések után mi mintha " +
+          "leszednénk a tábláról előbb két korongot, amelyek oppozícióban állnak (21. és 31.), azután a világos tesz dupla lépést 37—26 " +
+          "(vagyis 37x26), de a sötét is válaszul megteszi a dupla lépést 16–27 (vagyis 16x27). És mivel mindkét ellenfél megtett ugyanannyi " +
+          "dupla lépést, akkor az oppozíció birtoklása nem változik.</p>" +
+          "<p>És most nézzetek meg még egy végjátékot, ahol oppozíciós harc bontakozott ki a háttérben (405. ábra).</p>" +
+          "<p>A sötétnek korongelőnye van. Ő lépett 1. … 18-23. A 2.26-21 17x26; 3.28-22 lépések után a sötét kiszámolta, hogy az oppozíció a " +
+          "saját javára lesz, és lépett 3. … 23-28; 4. 22x33 26-31; 5. 27x36 19-23; 6. 36-31 16-21. Oppozíció! A világos, talán nagyon szomorú " +
+          "emiatt, nem is vette figyelembe az összes tartalékát a megmentéshez és lépett 7. 31-27 21x32; 8. 33-28 32-37; 9. 28x30 37-41, és a " +
+          "világos feladta. Egyébként, ebben a végjátékban a világos döntetlent tudott volna elérni. A 7. 31-27 helyett kellett volna játszania " +
+          "7. 33-28! 23x32; 8. 31-27 21-26; 9. 27x38 26-31; 10. 38-33 (fenyegetéssel 33-29 és 25-20) 24-30; 11. 25x34 31-37; 12. 33-28 37-42; " +
+          "13. 34-30! Más lépések veszítenek. Például, 28-22 42-48; 34-29 48-42; 29-23 42-37; 23-18 37-31 stb. Vagy 34-29 42-47; 29-23 47-41. " +
+          "Most pedig a világos számára a döntetlen biztosított, mert a 42-48 után ő 30-25 játszik és az egyik korongja áttör a dámába.</p>"
       },
       {
         "id": "406",
         "fen": "W:W:B",
         "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "comment": "LECSERÉLÉS" +
+          "<p>A lecserélésnek a játékban nagyon nagy szerepe van. Először, a csere segítségével lehet aktívan befolyásolni a pozíciót – " +
+          "eltávolítani (azaz lecserélni) az ellenfél erős helyzetben lévő korongjait, vagy gyorsan változtatni a saját korongjainak az " +
+          "elhelyezését, hogy előnyösebb mezőket foglaljanak el. A kezdőlépések – 1. 33-28 18-22; 2. 38-33 12-18; 3. 34-29 7-12; 4. 40-34 – " +
+          "után a világbajnoki meccs 9-ik partijában a 406. ábrán látható helyzet alakult ki.</p>" +
+          "<p>Itt történt meg a „harc a centrumért” „lecserélési párbaj”. 4. … 19-23; 5. 32x19 14x23. A sötét csere segítségével eltávolította " +
+          "a centrumból az ellenfél korongját és odaállította a sajátját. 6. 32-28 23x32; 7. 37x28. A világos nem marad adósa és úgyszintén " +
+          "cserével kényszeríti a sötétet, hogy hagyja el a központi 23. mezőt, és maga újra elfoglalja a 28. mezőt. De a sötét megint cserét " +
+          "készít elő, és mégis sikerül neki kiűzni a centrumból a világos korongot: 7. … 10-14; 8. 45-40 14-19; 9. 42-38 19-23!; " +
+          "10. 28x19 13x24. Azon kívül, most a sötét bizonyos mértékben lekötötte az ellenfél rövid szárnyának a korongjait. Ilyen lekötésből " +
+          "a világosnak nem olyan egyszerű felszabadulnia, a sötét pedig bármikor le tudja bontani ezt és gyorsan megváltoztatni a pozíciót, " +
+          "megint a csere segítségével, mégpedig: 20-25; 29x20 25x14.</p>"
       },
       {
         "id": "407",

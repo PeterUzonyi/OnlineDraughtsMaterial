@@ -5362,30 +5362,40 @@
       },
       {
         "id": "401",
-        "fen": "W:W:B",
-        "solution": [""],
+        "fen": "W:W39,44:B5,29",
+        "solution": [["44-40", "5-10", "39-34", "29-33", "34-30", "33-38", "30-24", "38-42", "24-19", "42-48", "19-13", "48-30", "13-9", "10-14", "9x20", "30-19"],
+        ["44-40", "5-10", "39-34", "29-33", "40-35", "33-38", "34-29", "38-42", "29-23", "42-48", "23-18", "48-26", "18-13", "10-14", "35-30", "14-19", "13x24", "26-37"],
+        ["44-40", "5-10", "40-35", "10-14", "35-30", "14-19", "30-25", "19-24"],
+        ["44-40", "5-10", "40-35", "10-14", "39-34", "29x40", "35x44"]],
         "comment": "<p>A különböző eredmények a fenti két példában magyarázható azzal, hogy az út a dámába nem egyforma volt. Tehát, bár az " +
           "oppozíció birtoklása előnyt is jelent, de hogy ez elegendő-e a győzelemhez, mutatja konkrét számítás is a jelen helyzethez. " +
           "<br>Íme, még egy érdekes és nagyon fontos eset.</p>" +
           "<p>401. ábra. Ha a világos igyekszik áttörni a dámába, megtámadva a 29. korongot, akkor veszít. Nézzük csak: 1. 44-40 5-10; " +
           "2. 39-34 29-33; 3. 34-30 33-38; 4. 30-24 38-42; 5. 24-19 42-48!; 6. 19-13 (ha 40-35, akkor 48-31, és azután 31-4 és 10-14) 48-30; " +
-          "7. 13-19 10-14; 8. 9x20 30-19 nyeréssel. A parti így is folytatódhat: 1. 44-40 5-10; 2. 39-34 29-33;3. 40-35 33-38; 4. 34-29 38-42; " +
+          "7. 13-9 10-14; 8. 9x20 30-19 nyeréssel. A parti így is folytatódhat: 1. 44-40 5-10; 2. 39-34 29-33;3. 40-35 33-38; 4. 34-29 38-42; " +
           "5. 29-23 42-48; 6. 23-18 48-26; 7. 18-13 10-14; 8. 35-30 14-19 és 9. 26-37 és a sötét győz. Megpróbáljuk világossal játszani az " +
           "oppozícióra. 1. 44-40 5-10; 2. 40-35 10-14; 3. 35-30 14-19!; 4. 30-25 19-24. Megint veszítünk, mert az oppozíció a sötét javára van. " +
           "Hát akkor nincs is menekvés? De van! És nem csak menekvés, hanem nyerés is! Csak ehhez így kell játszani: 1. 44-40 5-10; " +
           "2. 40-35 10-14; 3. 39-34! 29x40; 4. 35x44. És most az oppozíció a világos javára van, és ő győz. És mi hatott úgy az eredményre? A " +
-          "lecserélés! Amikor csere előtt az oppozíció a sötét javára volt, akkor csere után az oppozíció a világos számára lett hasznos. " +
-          "Tehát, a lecserélés átadja hasznát az oppozíciónak, vagyis annak birtoklását a másik félnek. Ezt nagyon fontos tudni. Tényleg, " +
-          "amikor látszik, hogy az oppozíció a végjátékban nem a javunkra alakul, akkor meg kell találni a módszert, hogyan cseréljünk.</p>"
+          "lecserélés! Amikor csere előtt az oppozíció a sötét javára volt, akkor csere után az oppozíció a világos számára lett hasznos.</p>"
       },
       {
         "id": "402",//108. Oldal
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "W:W24,26,50:B4,6,10",
+        "solution": [["50-44", "10-14", "44-39", "4-9", "39-33", "9-13", "33-28", "13-18", "26-21", "6-11"],
+        ["50-44", "10-14", "44-39", "4-9", "39-34", "9-13", "34-30"],
+        ["24-19", "4-9", "50-44", "10-15", "44-39", "6-11", "26-21", "9-14", "19x10", "15x4", "39-33", "4-9", "33-28", "9-13", "28-23"]],
+        "comment": "<p>Tehát, a lecserélés átadja hasznát az oppozíciónak, vagyis annak birtoklását a másik félnek. Ezt nagyon fontos tudni. Tényleg, " +
+          "amikor látszik, hogy az oppozíció a végjátékban nem a javunkra alakul, akkor meg kell találni a módszert, hogyan cseréljünk.</p>" +
+          "<p>402. ábra. Itt még egy példa. A világos számítást végez. Megbizonyosodva, hogy azután az 1. 50-44 10-14; 2. 44-39 4-9; 3. 39-33 " +
+          "9-13; 4. 33-28 13-18; 5. 26-21 6-11 lépések után a sötét elfoglalja az oppozíciót és nyer, a világos ellenőrizte a másik változatot: " +
+          "1. 50-44 10-14; 2. 44-39 4-9; 3. 39-34 9-13; 4. 34-30 stb. Ilyen folytatásnál a parti döntetlennel végződik. De vajon tud-e a " +
+          "világos utat találni a lecseréléshez? Hiszen akkor az oppozíció birtoklása átmegy hozzá és, talán, ad lehetőséget a nyeréshez. A " +
+          "figyelmes vizsgálat után a világos megbizonyosodott, hogy ki tudja kényszeríteni a sötétet lecserélésre.  Ehhez kell játszani az " +
+          "1. 24-19! A 19-13 lépés fenyegetése kényszeríti a sötétet vagy azonnal cseréljen a 10-14 úton, vagy menjen az 1… 4-9. És a sötét " +
+          "nem tud megmenekülni a lecseréléstől. Például: 2. 50-44 10-15; 3. 44-39 6-11; 4. 26-21 9-14; (a 15-20; 19-14 után a világos nyer – " +
+          "ellenőrizzétek ezt). 5. 19x10 15x4. A csere megtörtént, és vele együtt az oppozíciós kulcs átadása a világos kezébe! 6. 39-33 4-9; " +
+          "7. 33-28 9-13; 8. 28-23, és a világos nyer, mert sötétet nem segíti sem a 11-17, sem a 13-18 lépés.</p>"
       },
       {
         "id": "403",

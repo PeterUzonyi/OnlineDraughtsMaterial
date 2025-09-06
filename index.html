@@ -5712,6 +5712,119 @@
       },
       {
         "id": "420",
+        "fen": "W:W28,32,37,43:B13,19,25,26",
+        "solution": ["28-23", "19x28", "32x23", "25-30"],
+        "comment": "<p>Mi lesz az előre cserénél a hatodik sorban?</p>" +
+          "<p>Nézzük meg a 420. ábrát. Itt a csere előtt Tv=14-18=-4; a csere után – 1. 28-23 19x28; 2. 32x23 (és 25-30) – Tv=11-15=-4, " +
+          "vagyis az előre cserétől a hatodik sorban a T nem változik.</p>"
+      },
+      {
+        "id": "421",
+        "fen": "W:W24,25,29,33,37:B9,13,15,18,26",
+        "solution": ["24-20", "15x24", "29x20", "13-19"],
+        "comment": "<p>Még egy eset, amikor csere történik a 7. sorban.</p>" +
+          "<p>421. ábra. A csere előtt Tv=24-18=6. <br>Az 1. 24-20 15x24; 2. 29x20 (és 13-19 a gondolatban) Tv=20-16=4, vagyis az előre " +
+          "cserénél a hetedik sorban a T csökkent két tempóval.</p>"
+      },
+      {
+        "id": "422",//116. Oldal
+        "fen": "W:W34,35,40,45:B15,19,24,25",
+        "solution": [["34-30", "25x34", "40x20", "15x24"],
+        ["34-29", "24x33", "35-30", "25x34", "40x38", "15-20"]],
+        "comment": "<p>Ha végrehajtjuk az előre cseréket minden sorban, a harmadikkal kezdve a nyolcadikig, akkor tudunk állítani össze ilyen táblázatot:</p>" +
+          "<p class=\"tablazat\">&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;<span class=\"felkover\">A T változása az előre csere esetén</span> <br>– csere a 3. sorban	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T növekszik 6 tempóval " +
+          "<br>– csere a 4. sorban &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T növekszik 4 tempóval <br>– csere a 5. sorban	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T növekszik 2 tempóval <br>– csere a 6. sorban " +
+          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T nem változik <br>– csere a 7. sorban	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T csökken 2 tempóval <br>– csere a 8. sorban &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T csökken 4 tempóval</p>" +
+          "<p>Tehát, a T nagyságának változása egy lecserélés esetén attól függ, hogy melyik sorban történt csere.</p>" +
+          "<p>Már mondtuk, hogy hátra csere esetén a T 4 tempóval kisebb lesz, mint előre cserénél ugyanebben a sorban. Ezért rögtön lehet " +
+          "összeállítani táblázatot erre az esetre is.</p>" +
+          "<p class=\"tablazat\">&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;<span class=\"felkover\">A T változása a hátra csere esetén</span> <br>– csere a 3. sorban	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T növekszik 2 tempóval " +
+          "<br>– csere a 4. sorban &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T nem változik <br>– csere a 5. sorban	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T csökken 2 tempóval <br>– csere a 6. sorban " +
+          "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T csökken 4 tempóval <br>– csere a 7. sorban	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T csökken 6 tempóval <br>– csere a 8. sorban &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T csökken 8 tempóval</p>" +
+          "<p>A kényelem kedvéért állítsuk össze a 421/a. ábrát is. Az ábrán látható, milyen igazítást kap az aktuális T, amikor ti " +
+          "végrehajtotok egyes cseréket.</p>" +
+          "<p>A 421/a ábra használata nagyon egyszerű. Baloldalon szerepel a soronkénti igazítás az előre csere esetén, jobboldalon pedig – a " +
+          "hátra cserénél. Tételezzük fel, hogy a parti valamelyik pillanatában megszámoltátok a saját T-t. Kiderült, hogy T = -5. Ezután " +
+          "mindkét fél megtett néhány lépést, amitől a T nem változott meg.</p>" +
+          "<h3>421/a.<figure><img src=\"./images/421a.png\" alt=\"A T igazítása az egyes (1–1) csere esetén\"><figcaption>A T igazítása az egyes (1–1) csere esetén</figcaption></figure></h3>" +
+          "<p>Ha most akartok cserét tenni előre a negyedik sorban, és akarjátok tudni, milyen lesz a T a csere után, nézzétek az ábrát. Az " +
+          "ábra szerint (nézzük baloldalon) az igazítás lesz +4. Tehát, ilyen csere után új T=-5+4=-1. Ha, például, akartatok volna ebben a " +
+          "sorban cserélni hátra, akkor (nézzük az ábra jobb oldalát) az igazítás egyenlő 0, és a T az ilyen cserétől nem váltózik.</p>" +
+          "<p>Vajon nem hasznos-e tudni, például, hogy ha csere alatt (amely gyakran történik) – 37-31 26x37 – levesztek korongot 42x31 úton, " +
+          "akkor a T 4 tempóval megnő, és ha 32x41 úton,– akkor egyáltalán nem változik? Érdemes szintén emlékezni, hogy a T csökkenéséhez " +
+          "igyekezni kell cserélni a távolabbi sorban. Arra figyeljetek, hogy az egyes cserék útján nem lehet megváltoztatni a tempóérték " +
+          "<span class=\"felkover\">párosságát</span>. Ha a tempóérték páros volt a csere előtt, akkor páros lesz a csere után is. És fordítva, " +
+          "páratlan T a csere után is páratlan marad (hiszen az igazítások mind párosak).</p>" +
+          "<p>Most nézzük meg, hogyan változik a tempóérték a kettős cserétől, amikor minden ellenfélnek leveszik két-két korongját.</p>" +
+          "<p>Nézzük meg a következő o pozíciót (422. ábra). Most ott Tv=13-17=-4. Tegyünk meg kettős cserét – 1. 34-30 25x34; 2. 40x20 15x24. " +
+          "Most Tv=6-9=-3, vagyis T megnőtt egy tempóval. Próbáljuk meg ebben a pozícióban megtenni a kettős cserét másképpen: 1. 34-29 24x33; " +
+          "2. 35-30 25x34; 3. 40x38 (és mivel most a sötétnek kell lépnie, akkor gondolatban tegyünk egy lépést, legyen 15-20).</p>"
+      },
+      {
+        "id": "423",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "424",//117. Oldal
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "425",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "426",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "427",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "428",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "429",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "430",
         "fen": "W:W:B",
         "solution": [""],
         "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +

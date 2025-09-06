@@ -5758,25 +5758,60 @@
           "<p>Most nézzük meg, hogyan változik a tempóérték a kettős cserétől, amikor minden ellenfélnek leveszik két-két korongját.</p>" +
           "<p>Nézzük meg a következő o pozíciót (422. ábra). Most ott Tv=13-17=-4. Tegyünk meg kettős cserét – 1. 34-30 25x34; 2. 40x20 15x24. " +
           "Most Tv=6-9=-3, vagyis T megnőtt egy tempóval. Próbáljuk meg ebben a pozícióban megtenni a kettős cserét másképpen: 1. 34-29 24x33; " +
-          "2. 35-30 25x34; 3. 40x38 (és mivel most a sötétnek kell lépnie, akkor gondolatban tegyünk egy lépést, legyen 15-20).</p>"
+          "2. 35-30 25x34; 3. 40x38 (és mivel most a sötétnek kell lépnie, akkor gondolatban tegyünk egy lépést, legyen 15-20). Ilyen " +
+          "csere után Tv=5-8=-3, vagyis a tempóérték megint megnőtt egy tempóval.</p>"
       },
       {
         "id": "423",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "W:W27,38,43,49:B12,13,18,29",
+        "solution": ["27-22", "18x27", "38-33", "29x38", "43x21", "13-19"],
+        "comment": "<p>Egy másik pozíciót is nézzünk meg (423. ábra). <br>Itt Tv=11-16=-5. Tegyünk meg kettős cserét: 1. 27-22 18x27; " +
+          "2. 38-33 29x38; 3. 43x21 (és 13-19 gondolatban). Most Tv=7-7=0, vagyis megnőtt 5 tempóval.</p>"
       },
       {
         "id": "424",//117. Oldal
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "W:W31-50:B1-20",
+        "solution": ["33-28", "18-23", "39-33", "12-18", "34-30", "20-25", "40-34", "7-12", "34-29", "25x34", "29x40"],
+        "comment": "<p>Több példát is lehet megnézni kettős cserére, a T csökkenni vagy nőni fog, de mindig <span class=\"felkover\">páratlan " +
+          "számmal</span>. Ezt fontos megjegyezni. Mivel a hármas cserék a partiban ritkák, ezért azokat nem fogjuk vizsgálni. Csak annyit " +
+          "mondunk, hogy ilyenkor a T páros tempóval változik. Ha ismerjük T-t, és kettős vagy hármas cserét hajtunk végre, akkor hogyan lesz " +
+          "egyszerűbb kiszámolni az új tempóértéket a csere után?  Hiszen az előbb idézett igazítási ábra csak az egyes cserékhez alkalmas. " +
+          "Vajon a csere után újra kell számolni Σv és Σs, és megállapítani a különbséget? Nem, ezt nem kötelező csinálni. Rögtön meg lehet " +
+          "találni az igazítást, amit ezzel a cserével okoztunk. Ezt az igazítást számolják ki a leszedett korongok alapján. Hiszen a " +
+          "korongokkal együtt mi mintha leszednénk a tábláról azokat a tempókat is, amelyeket ők elveszítettek.</p>" +
+          "<p>Térjük vissza a 422. ábrához. Az első változatú csere után (1. 34-30 25x34; 2. 40x20 15x24) a tábláról leszedik a 40. és a 34. " +
+          "világos korongokat, vagyis mintha elvennének 3 + 4 = 7 értékegységet. A sötétnél üresek lettek a 15. és 25. mezők, vagyis elveszik " +
+          "8 értékegység. Tehát, a Tv-hez lesz igazítás 7-8=-1. Az új Tv-hez ezt az igazítást <span class=\"felkover\">le kell vonni</span> az " +
+          "ezelőttitől, ami -4 volt. -4-(-1)=-3. Ez lesz a lecserélés utáni Tv. Visszatérve a 422. ábrához, újból tegyük meg a cserét, csak " +
+          "másképpen (34-29 és 35-30). A világosnál leveszik a 34. és a 35. korongot, vagyis 8 értékegységet (a 40. korong átmenete a 38. " +
+          "mezőre ugyanebben a sorban nem változtatja az értékszámot). A sötétnél leveszik a 24. és a 25. korongot, vagyis 10 értékegységet. " +
+          "De mivel lépnie kell sötétnek, akkor az igazításhoz kell hozzáadni egyet. <br>Így az igazítás: 8-10+1=-1. <br>Új Tv (régi egyenlő -4): " +
+          "Tv=-4-(-1)=-3, vagyis ugyanaz az eredmény, mint az első féle csere esetén.</p>" +
+          "<p>Most pedig térjünk vissza a 423. ábrához. <br>Még egyszer tegyük meg a cserét és számoljuk ki az igazítást. 1. 27-22 18x27; " +
+          "2. 38-33 29x38; 3. 43x21. Tv csere előtt volt -5. A csere után eltűntek a világos 38. és 27. korongok, vagyis elveszett 5+3=8 " +
+          "értékegység, viszont a 43. korong átment a 21. mezőre, emiatt hozzá adódott 4 értékegység (4 soron át ment előre és így veszített " +
+          "4 tempót). Tehát, a világos elveszett 8-4=4 értékegységet. A sötétnél eltűntek a 18. és a 29. korongok, azaz elveszett 4+6=10 " +
+          "értékegység. Mivel a csere után a sötét lép, akkor az igazításhoz hozzá kell adni egy egységet. Így az igazítás lesz 4-10+1=-5. " +
+          "Az új Tv megállapításához a régi Tv-től le kell vonni az igazítást: -5-(-5)=0. Ugyanaz az eredmény, mint korábban. Kis gyakorlás " +
+          "után ezeket a számításokat a játék alatt fejben automatikusan és nagyon gyorsan végzik. Erre egészen kevés idő megy el, viszont a " +
+          "haszon nagy lehet belőle.</p>" +
+          "<h4>A tempóérték alkalmazása a játékban</h4>" +
+          "<p>Először, el kell mondani, hogy a tempók elméletét kizárólag a pozíciós játékban használják fel. Ezzel szemben ez semmiképpen sem " +
+          "tud segíteni az ellenfél kombinációs hullámai ellen. Hasonlítsuk össze a partit egy tengeren lévő csónakkal, kombinációs eseteket – " +
+          "a viharral, és a nyugodt pozíciós játékot – a csendes vízzel. Ekkor a tempók elmélete olyan lesz, mint a kormánykerék: segítségével " +
+          "lehet vezetni a csónakot a csendes vízen, de a kormány nem garantál biztonságot a csónaknak a tengeri viharban. Hogyan lehet " +
+          "alkalmazni ezt az elméletet a parti alatt? Legjobb, ha saját tempóértékünket számoljuk a játszma elejétől. Ez egyszerű. Az elején a " +
+          "tempóérték nullával egyenlő. Később, mint tudjuk, a sima lépésektől ez nem változik. Tehát, csak a lecserélések után kell tenni " +
+          "igazítást a T-hez. Ha szándékoztok zárt klasszikus partit játszani, akkor kell, hogy a ti T-tek negatív legyen. Ezt már tudjátok. " +
+          "A tempóérték változik a cseréktől.  Tehát, ebben az esetben kényszeríteni kell az ellenfelét olyan lecserélésekre, amelyek " +
+          "csökkentik a T-t. Tételezzük fel, hogy ti először nem figyeltétek a tempóértéket, és kiszámolva a középjáték egy bizonyos " +
+          "pillanatában, meggyőződtetek, hogy ez nálatok pozitív. Ez azt jelenti, hogy zárt klasszikus pozíciókban a pozíciós előny (a tempók " +
+          "szempontjából) az ellenfélnél lesz. Ha a táblán éppen ilyen pozíció alakult, akkor nektek vagy egy másik fajta játékra kell átállni, " +
+          "vagy küzdeni olyan lecserélésekért, amik lecsökkentik a ti tempóértéketeket.</p>" +
+          "<p>Íme, néhány tipikus csere-manőver, amelynek a célja csökkenteni a T-t. A következő lépések után – 1. 33-28 18-23; " +
+          "2. 39-33 12-18; 3. 34-30 – alakul alábbi pozíció (424. ábra).</p>" +
+          "<p>Ha most a sötét lép 3. … 20-25, akkor a világos, a zárt klasszikus parti játékának céljából, léphet 4. 40-34. Ennek a lépésnek " +
+          "az a célja, hogy később a csere útján – 34-29 25x34; 29x40 – negatív tempóértékét szerezzen. A csere után Tv=-2</p>"
       },
       {
         "id": "425",

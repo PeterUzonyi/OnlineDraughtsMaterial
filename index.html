@@ -5837,33 +5837,156 @@
       },
       {
         "id": "427",//118. Oldal
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "W:W27,28,32,33,34,37,38,39,40,48:B3,12,16,18,19,21,23,24,25,26",
+        "solution": ["48-43", "12-17", "40-35", "17-22", "28x17", "21x12", "37-31", "26x28", "33x13", "19x8", "34-30", "25x34", "39x28"],
+        "comment": "<p>A negatív tempóérték zárt klasszikus pozíciókban nagy szerepét játszik főleg akkor, amikor mindkét félnek marad " +
+          "összesen 9-9, 10-10, 11-11 vagy 12-12 korongja. Íme, egy példa.</p>" +
+          "<p>Nézzük meg a 427. ábrát. A sötét lép. Mindkét játékosnak 10-10 korongja van. Számoljuk tempóértéket. <br>Σv=1+(3x4)+(4x3)+" +
+          "(5x2)=35 <br>Σs=1+(3x2)+(4x2)+(5x4)+6=41 <br>Mivel lép a sötét, akkor a tempóösszegéhez hozzá kell adni még egyet. Így Σs=42. " +
+          "Tehát, <br>Tv=Σv-Σs=35-42=-7. <br>És mivel ez zárt klasszikus pozíció, akkor minden esetben mondhatjuk, hogy a pozíciós előny a " +
+          "világosé. Ebben a helyzetben a sötét első lépésével megfosztotta magát utolsó esélytől a megmenekülésre. Sötét lépett az " +
+          "1. … 13-18 (jobb lett volna 3-8). Ez után a centruma támasz nélküli lett, azaz ott már lehetetlen bármilyen cserét megtenni. A " +
+          "játék rövid ideig tartott. 2. 48-43 12-17. A sötétnek nincs választása: nem lehet se 3-8, se 3-9, mert erre a világos be tud menni " +
+          "a dámába – 27-22 18x27; 28-22 27x18; 37-31. 3. 40-35 17-22 4. 28x17 21x12; 5. 37-31 26x28; 6. 33x13 19x8; 7. 34-30 25x34; " +
+          "8. 39x28 és korongelőny mellett a világos nyert.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Szvjatoj – Ramm, 1956</span></p>"
       },
       {
-        "id": "428",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "id": "428/A",
+        "fen": "W:W31-50:B1-20",
+        "solution": ["34-30", "20-25", "32-28", "25x34", "39x30", "16-21", "30-25", "11-16", "44-39", "21-26", "40-34", "7-11", "34-30",
+          "17-21", "30-24", "19x30", "25x34", "14-19", "37-32", "26x37", "42x31", "15-20", "31-26", "11-17", "36-31", "18-23", "31-27",
+          "12-18", "47-42", "17-22", "26x17", "22x11", "41-37", "11-17", "50-44", "10-15", "46-41", "17-21", "44-40", "5-10"],
+        "comment": "<p>Most megmutatunk egy partit, ahol a sötét már az elejétől „tempós” játékot vezetett. Ő szerzett negatív T-t és " +
+          "állandóan igyekezett megtartani a zárt klasszikus pozíciót. Az első lépésektől kezdve, figyelni fogunk a Ts-re, megfigyelve a " +
+          "változásokat minden csere után.</p>" +
+          "<h4 class=\"kozepre\">Dioni – Ghestem, 1943</h4>" +
+          "<p>Tehát, a parti megkezdődik. A tempóérték egyenlő nullával. Tv=Ts=0. 1. 34-30 20-25; 2. 32-28 25x34; 3. 39x30. (Most Ts=-2) " +
+          "3. … 16-21; 4. 30-25 11-16; 5. 44-39 21-26; 6. 40-34 7-11; 7. 34-30 17-21; 8. 30-24 19x30; 9. 25x34 (Ts=2) 9. … 14-19; " +
+          "10. 37-32 26x37; 11. 42x31. (Most újra Ts=-2) 11. … 15-20; (Ghestem mintha felkérné világost a 26-ra lépni. Ezzel ő szerez még " +
+          "két negatív tempót). 12. 31-26 11-17; 13. 36-31 18-23; 14. 31-27 12-18; 15. 47-42 17-22; 16. 26x17 22x11. Ez az egész hadmozdulat " +
+          "– megkezdve a „felkéréstől” bemenni a 26. mezőre és befejezve ezzel a lecseréléssel, amelynek a célja csökkenteni a Ts-t, – " +
+          "jellemző a tempós játékra. Ennek a játéknak nagy szakértője – a volt világbajnok (1945-48) P.Ghestem. Most a sötét tempóértéke " +
+          "Ts=-4.  Ghestem továbbra is tartósan őrzi ezt negatívnak, és a játékot – a zárt klasszikus parti keretében. 17. 41-37 11-17; " +
+          "18. 50—44 10-15; 19. 46-41 17-21; 20. 44-40 5-10 (428/B. ábra).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Dioni – Ghestem, 1943</span></p>"
       },
       {
-        "id": "429",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "id": "428/B",
+        "fen": "W:W27,28,32,33,34,35,37,38,39,40,41,42,43,45,48,49:B1,2,3,4,6,8,9,10,13,15,16,18,19,20,21,23",
+        "solution": ["34-30", "20-24", "40-34", "10-14", "30-25", "8-12", "34-30", "1-7", "49-44", "7-11", "44-40", "11-17", "41-36", "21-26",
+          "37-31", "26x37", "42x31", "17-21", "27-22", "18x27", "31x22", "12-17"],
+        "comment": "<p>Mindkét játékos kivezeti saját kis értékű 46. és 5. korongjait. E tipikus lépésektől és annak következő sorozatától a T nem " +
+          "váltózik, és így a sötét megőrzi pozíciós előnyét. Ez az előny még jelentősebb lesz, amikor a táblán kevesebb korong marad. " +
+          "21.34-30 20-24; 22. 40-34 10-14; 23. 30-25 8-12; 24. 34-30 1-7; 25. 49-44 7-11; 26. 44-40 11-17. A sötét továbbra is igyekszik a " +
+          "céljához: a harci erők csökkentése mellett megőrizni a zárt klasszikus játékot és a negatív tempóértékét. Hiszen akkor, kevesebb " +
+          "korongnál (9, 10, 11 vagy 12 darabbal) a sötétnek könnyebb lesz érvényesíteni saját tempóelőnyét. 27. 41-36. A világos nem tudott " +
+          "most áttérni a nyitott pozícióhoz – 27-22 18x27; 25-20 14x34; 40x7 2x11; 28-23 19x28; 33x31 úton –, mert erre lett volna 21-27; " +
+          "32x12 11-17; és 16x47 nyeréssel. 27. … 21-26; 28. 37-31 26x37; 29. 42x31. (Most Ts=-8, méghozzá azt kell mondanunk, hogy az ilyen " +
+          "„lemaradás a fejlődésben” semmiképpen nem okozott a sötét centrumának a legyengítését, az ellenfél centrumához képest). 29. … 17-21; " +
+          "30. 27-22 18x27; 31. 31x22 (a tempóérték nem változott) 12-17. Nem szabad játszani 12-18; mert 48-42! 18x27; 25-20 14x34; " +
+          "40x18 13x22; 28x26, és a világos leüti a 27. korongot.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Dioni – Ghestem, 1943</span></p>"
+      },
+      {
+        "id": "429",//119. Oldal
+        "fen": "W:W22,25,28,30,32,33,35,36,38,39,40,43,45,48:B2,3,4,6,9,13,14,15,16,17,19,21,23,24",
+        "solution": ["22x11", "6x17", "36-31", "13-18", "31-27", "9-13", "39-34", "3-9", "34-29", "23x34", "40x20", "15x24", "45-40", "18-23", "40-34", "13-18"],
+        "comment": "<p>32. 22x11. (lásd a 429. ábrát) 32. … 6x17. Gondoljátok meg és találjátok ki magatok, a világos miért ütött előre, és " +
+          "nem hátra? (Magyarázat a parti végén). 33. 36-31 13-18; 34. 31-27 9-13; 35. 39-34 3-9!; 36. 34-29 23x34; 37. 40x20 15x24. Most " +
+          "Ts=-5. Tehát, érthető, hogy a sötét azonnal visszaállítja a zárt klasszikus játékot. 38. 45-40 18-23!; 39. 40-34 13-18.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Dioni – Ghestem, 1943</span></p>"
       },
       {
         "id": "430",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>430. ábra. Ily módon, a sötét terve megvalósul – megmaradt már 11–11 korong, pozíció – klasszikus, Ts – negatív. Nemsokára le lehet „aratni a munkájának a gyümölcsét”. 40. 48-42. A 34-29 23x34 30x39 lépésre lehetett 9-13; 48-42 (nem lehet a 39-34, mert 17-22; 28x26 24-30; és 19x37) 4-9; 27-22 (nem lehet 42-37, mert 24-29; 33x24 19x30; és azután 18-22) 18x27; 42-37 27-31; 37x26 2-8, és a sötét nyert volna. De a parti így folytatódott: 40. … 9-13; 41. 43-39. Ha 34-29 23x34 30x39, akkor lenne a 4-9 nyeréssel, mint a megjegyzésben az ezelőtti lépéshez. 41. … 2-7; 42. 42-37. A világos tempói kimerülnek, kezdődik az „egyetlen lépések” időszaka. A sötétnek, pedig, ahogyan mutatja a tempóérték, de az első pillantásból a táblán is látszik (4. és 7. korong), még vannak tartalékai. 42. … 7-11!; 43. 25-30 (ha 28-22 17x28; 33x22, akkor 23-28; 32x12 21x43!; 39x48 24-29 és 19x8 nyeréssel). 43. … 14x25. A sötétnek egykorongos előnye van és a tempóértékét már nem muszáj számolgatni! 44. 28-22 17x28; 45. 33x22 21-26; 46. 39-33 4-10! és néhány lépés múlva (47. 34-29 25x34; 48. 29x40 10-14; 49. 33-28 14-20; 50. 40-34 20-25; 51. 38-33 11-17) a világos feladta. A sötét az egész játékát ebben a partiban a tempók elmélete használásával építette fel! Most válaszoljunk a 429. ábrához fűződő kérdésre. Bizonyára, ti is megtaláltátok, hogy a sötétnek nem szabadott ütni hátra 32. … 16x7 a visszapattanásos ütés miatt – 33. 25-20! 14x34; 34. 40x18 13x22; 35. 28x26 egykorongos nyeréssel.</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Dioni – Ghestem, 1943</span></p>"
+      },
+      {
+        "id": "431",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "432",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "433",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "434",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "435",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "436",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "437",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "438",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "439",
+        "fen": "W:W:B",
+        "solution": [""],
+        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
+          "ötletek és a technikai fogások?</p>" +
+          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
+          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+      },
+      {
+        "id": "440",
         "fen": "W:W:B",
         "solution": [""],
         "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +

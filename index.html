@@ -5593,16 +5593,52 @@
           "<p>Próbáljuk meg kiszámolni a felhasznált tempók különbségét ebben a pozícióban (412. ábra). A világos lép. Először " +
           "megállapítjuk az értékszámok összegét a világos korongok számára. Az összeget Σv-vel jelöljük meg. <br>Egy korong a második " +
           "sorban hoz <br>1 x 2 = 2 <br>Két korong a harmadik sorban hoz <br>2 x 3 = 6 <br>Három korong a negyedik sorban hoz " +
-          "<br>3 x 4 = 12 <br>Három korong az ötödik sorban hoz <br>3 x 5 = 15 <br>Egy korong a hatodik sorban hoz <br>1 x 6 = 6</p>"
+          "<br>3 x 4 = 12 <br>Három korong az ötödik sorban hoz <br>3 x 5 = 15 <br>Egy korong a hatodik sorban hoz <br>1 x 6 = 6 <br><span class=\"felkover\">Összesen: 41.</span></p>" +
+          "<p>Most állapítsuk meg az értékszámok összegét a sötét korongok számára és megjelöljük Σs-sel. <br>Két korong a második sorban hoz " +
+          "<br>2 x 2 = 4 <br>Két korong a harmadik sorban hoz <br>2 x 3 = 6 <br>Három korong a negyedik sorban hoz <br>3 x 4 = 12 " +
+          "<br>Két korong az ötödik sorban hoz <br>2 x 5 = 10 <br>Egy korong a hatodik sorban hoz <br>1 x 6 = 6 <br><span class=\"felkover\">Összesen: 38.</span></p>"
       },
       {
-        "id": "413",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "id": "413",//113. Oldal
+        "fen": "W:W31-50:B1-20",
+        "solution": ["32-28", "19-23", "28x19", "14x23"],
+        "comment": "<p>Tehát, a világos közös számértéke lesz 41, vagyis Σv= 41, a sötét közös számértéke pedig lesz 38, vagyis Σs= 38. " +
+          "Számoljuk ki a felhasznált tempók különbségét a világos számára: Σv - Σs  = 41 - 38 = 3, vagyis a világos felhasznált 3 tempóval " +
+          "többet. Tehát, az ő tartaléka 3 tempóval kisebb, mint a sötété. Számoljuk ki a felhasznált tempók különbségét a sötét számára: " +
+          "Σs - Σv = 38 - 41 = -3, vagyis a sötét felhasznált 3 tempóval kevesebbet, tehát, az ő tartaléka 3 tempóval nagyobb, mint a világosé. " +
+          "Ezt a különbséget, vagyis a különbséget a mindkét fél által felhasznált tempók között <span class=\"felkover\">tempóértéknek</span> fogjuk nevezni és megjelöljük " +
+          "T betűvel. Ha valamelyik félnél a T – pozitív érték, akkor ez azt jelenti, hogy ő több tempót használt fel, mint az ellenfél, és " +
+          "így kisebb tartalékkal rendelkezik. Ha pedig T – negatív, akkor ez azt jelenti, hogy a játékos takarékoskodott a tempóival és így " +
+          "nagyobb tartalékkal rendelkezik.</p>" +
+          "<p>Világos, hogy a zárt klasszikus pozíciókban előnyös a negatív tempóérték. Ugyanúgy érthető, hogy ha nálunk negatív tempóérték " +
+          "van, akkor igyekeznünk kell áttérni a zárt klasszikus pozícióhoz.</p>" +
+          "<p><u>Megjegyzés:</u> a kavarodás elkerülése érdekében a T kiszámítását el kell végezni a világos lépése előtt. Ha mégis ezt a " +
+          "sötét lépése előtt kell elvégezni, akkor az Σs-hez kell hozzáadni 1-et, vagy fejben lépni bármelyik sötét koronggal. Íme, bizonyos " +
+          "helyzetben, például, a sötét akkor akarja magának kiszámítani a T értékét, amikor neki lépnie kell. Ki kell számolnia a Σv-t. " +
+          "Legyen, mondjuk, 36. Azután számolja ki a Σs-t. A sötét tempók összege legyen 31. Most, mivel a sötét lép, a Σs-hez hozzá kell " +
+          "adni 1. Σs +1 = 32. Tehát, a T a sötét számára ebben a pozícióban 32 - 36 = -4 lesz. Ha ez zárt klasszikus pozíció volt, akkor a " +
+          "legvalószínűbb, hogy ez előnyös a sötét számára. Megállapodunk a világos T-t jelölni mint Tv, a sötét T-t pedig – mint Ts. Érthető, " +
+          "hogy ugyanazon pozícióban Tv mindig egyenlő Ts-sel (abszolút értékben): hiszen Tv= Σv- Σs, és Ts= Σs-Σv. Tehát, amikor megkeressük " +
+          "a Tv-t, akkor rögtön meg tudjuk nevezni a Ts-t is. Persze, nem nehéz játék közben is kiszámolni fejben a Σv-t és a Σs-t, és azután " +
+          "megállapítani a tempóértéket az egyik vagy a másik fél számára. De mi mindjárt megmutatjuk, hogyan lehet megállapítani T-t " +
+          "gyorsabban és egyszerűbben. Nézzük meg újra a 412. ábrát. Ebben a pozícióban nem kevés olyan világos és sötét korong van, amelyek " +
+          "szimmetrikusan vannak elhelyezve. Az ilyen korongokat rögtön látjuk. Ennek az értékszámait nem kellett volna sem megállapítani sem " +
+          "összeadogatni – hiszen a különbség (vagyis a tempóértéke) megállapításakor azok kölcsönösen megsemmisülnek. Így a szimmetrikusan " +
+          "elhelyezett korongok egész csoportját – a 13., 14., 18., 19., 23., 24. sötét és a 27., 28., 32., 33., 37., 38. világos, valamint " +
+          "16., 26. és 25., 35. korongokat nem is kellett számolni. Csak a 6., 7. és 30., 43. korongok maradtak. Ebből adódik: " +
+          "<br>Σs = 2 + 2 = 4 <br>Σv = 2 + 5 = 7 <br>A Tv 7 - 4 = 3 lesz, és így a Ts = - 3, vagyis ugyanazt az eredményt kapjuk, amelyet " +
+          "korábban kiszámítottunk, csak egyszerűbb úton és gyorsabban.</p>" +
+          "<p>Tehát, végezzünk rövid összefoglalást: <br>A tempószám mutatja, hány tempóval többet vagy kevesebbet kell felhasználnunk " +
+          "az ellenfélhez képest. Ha nekünk a T – negatív, akkor a tempótartalékunk nagyobb, ha a T – pozitív – akkor kisebb. A " +
+          "tempószámunk megállapításához a saját összegzett értékszámból kell levonni az ellenfél összegzett értékszámát, vagyis a " +
+          "világos számára a Tv = Σv - Σs, a sötét számára pedig – a Ts =  Σs - Σv. A felek értékösszegeinek összevonásakor ki lehet " +
+          "hagyni a számításból a szimmetrikusan elhelyezett korongokat. Ha a T-t meg kell állapítani a sötét lépése előtt, akkor a " +
+          "Σs-hez hozzá kell adni 1-et. Ha a mi tempóértékünk negatív – igyekezzetek a zárt klasszikus pozíciókhoz. Ha a tempóértéke " +
+          "pozitív – törekedni kell a nyílt játékra (a centrumban közös lekötés nélkül), vagy próbáljátok megváltoztatni a T-t a javatokra.</p>" +
+          "<p>Hogyan is lehetne megváltoztatni a tempóértéket? Már mondtuk, hogy ez csak lecserélések segítségével lehet.</p>" +
+          "<h4>A T megváltoztatása lecserélésekkel</h4>" +
+          "<p>Világos, hogy a parti előtt akár a Tv, akár a Ts egyenlő a nullával. Ez azt jelenti, hogy mindkét félnek egyenlő a tempótartaléka. " +
+          "De tegyük meg következő lépéseket: 1. 32-28 19-23; 2. 28x19 14x23. Megtörtént a csere és létrejött a következő pozíció (413. ábra).</p>"
       },
       {
         "id": "414",

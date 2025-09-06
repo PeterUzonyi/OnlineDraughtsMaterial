@@ -5638,34 +5638,49 @@
           "<p>Hogyan is lehetne megváltoztatni a tempóértéket? Már mondtuk, hogy ez csak lecserélések segítségével lehet.</p>" +
           "<h4>A T megváltoztatása lecserélésekkel</h4>" +
           "<p>Világos, hogy a parti előtt akár a Tv, akár a Ts egyenlő a nullával. Ez azt jelenti, hogy mindkét félnek egyenlő a tempótartaléka. " +
-          "De tegyük meg következő lépéseket: 1. 32-28 19-23; 2. 28x19 14x23. Megtörtént a csere és létrejött a következő pozíció (413. ábra).</p>"
+          "De tegyük meg következő lépéseket: 1. 32-28 19-23; 2. 28x19 14x23. Megtörtént a csere és létrejött a következő pozíció (413. ábra).</p>" +
+          "<p>Vajon megváltozott a tempóérték? Számoljuk ki! Már tudjátok, hogy a szimmetrikusan elhelyezett korongokat nem kell számolni. " +
+          "Ezért az összes korongból értékszámokat veszünk csak a 23. és a 37. korongnak. A 23. korong értékszáma lesz 5. A 37. korong " +
+          "értékszáma lesz 3. Számoljuk ki: a Tv=3-5=-2, vagyis most a világos tempótartaléka kettővel nagyobb, mint a sötété. Tehát, " +
+          "látjátok, hogy a lecserélés során a tempóértéke, a T változik. Megvizsgáljuk ezt a kérdést részletesebben. Először nézzünk " +
+          "cseréket, olyanokat, amikor minden fél egyszerre egy-egy korongot üt le. Tételezzük fel, hogy az ellenfélnek ugyanazt a korongját " +
+          "tudjuk levenni ütéssel előre, és ütéssel hátra is. Milyen hatással lesz ez a különbség a tempóértékre?</p>"
       },
       {
         "id": "414",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "fen": "W:W35,40,45:B5,12,29",
+        "solution": [["40-34", "29x40", "45x34"],
+        ["40-34", "29x40", "35x44"]],
+        "comment": "<p>Következő a 414. ábra. Az előre csere, azaz 1. 40-34 29x40; 2. 45x34 és a sötét feltételes lépése (mondjuk, az 5-10) " +
+          "után lesz Tv = 8 - 5 = 3. A hátra csere, azaz 1. 40-34 29x40; 2. 35x44 (és gondolatban az 5-10) után Tv=4-5=-1. A tempóérték, " +
+          "amelyet az előreütéskor kaptunk, 4 egységgel nagyobb, mint hátraütéskor.</p>"
       },
       {
-        "id": "415",
-        "fen": "W:W:B",
-        "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "id": "415",//114. Oldal
+        "fen": "W:W25,30,35:B3,5,19",
+        "solution": [["30-24", "19x30", "25x34"],
+        ["30-24", "19x30", "35x24"]],
+        "comment": "<p>Nézzük még egy példát (415. ábra): <br>Az előreütéses csere után – 1. 30-24 19x30; 2. 35x19 (és gondolatban lépjünk " +
+          "5-10) – Tv=12-3=9. <br>A hátraütéses csere után – 1. 30-24 19x30; 2. 25x34 (és gondolatban 5-10) – Tv=8-3=5. <br>Megint a " +
+          "tempóérték az előreütésnél négy egységgel nagyobb lett, mint a hátraütésnél. Magatok is ellenőrizhetek, hogy a tábla bármilyen " +
+          "pontjában hasonló különbség mindig négy tempóval egyenlő. Ez teljesen érthető. Előreütéskor a ti korongotokból egyik kitör két " +
+          "sorral tovább, amitől a tempótartalék csökken két egységgel. Hátraütéskor pedig egy korongotok visszalép két sorral, amitől a " +
+          "tempótartalék két egységgel megnő. Ezért e két ütés közötti különbség négy egységgel lesz egyenlő.</p>"
       },
       {
         "id": "416",
         "fen": "W:W:B",
         "solution": [""],
-        "comment": "<p>Ugye, az 58. és 59. pozíció külsőleg teljesen mások, de a benne lévő kombinációknál nagyon hasonlóak az indítékok, az " +
-          "ötletek és a technikai fogások?</p>" +
-          "<p>Ezek az elemek nagyon hasonlóak a következő két példában is (lásd a pozíciókat a 60. és a 61-es ábrákon).</p>" +
-          "<p class=\"kozepre\"><span class=\"felkover\">Deslauriers – Bizot, 1952</span></p>"
+        "comment": "<p>Amikor tisztáztuk, hogy a hátra csere megtartja a négy tartalékos tempót az előre cserével szemben, érthető lett, az " +
+          "erős játékosok miért gyakran inkább hátra cserélnek. Ezt nem azzal a céllal teszik, hogy védekezésbe menjenek át, hanem inkább azért, " +
+          "hogy a játékban negatív tempóértéket és előnyt szerezzenek a tempók tartalékában. Tehát, a lecseréléstől változik a T. Kipróbáljuk, " +
+          "hogy e változás nagysága függ-e attól, hogy a tábla melyik sorában történik a csere. Lecserélési sornak számít a táblán, ahol " +
+          "tartózkodik az első korong, amelyet leszednek a csere során.</p>" +
+          "<p><u>A magyarázat</u> (lásd a 416. ábrát): <br>Itt a sötét lép. Figyelembe kell venni, hogy a csere – az 1. … 14-20; 2. 39-33 20x29; " +
+          "3. 33x24 után – megtörtént a hatodik sorban. Elsőként leveszik a világos 24. korongot, és a sorok számolását kell a világos szélétől " +
+          "kezdeni. Csere az 1. … 13-19; 2. 24x13 8x19 után megtörtént a negyedik sorban, mert elsőként leveszik a sötét 19. korongot. A cserét " +
+          "az 1. … 21-27; 2. 32x21 16x27 után olyannak kell tekinteni, mint a cserét a hatodik sorban, hiszen elsőként a sötét 27. korongját " +
+          "vették le.</p>"
       },
       {
         "id": "417",

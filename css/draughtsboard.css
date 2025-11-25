@@ -1,3 +1,12 @@
+/*
+ * FRISSÍTETT draughtsboard.css – Optimalizált design a dámajáték tankönyvhöz.
+ *
+ * MÓDOSÍTÁSOK:
+ * 1. Tábla színek cseréje (fehér/kékes szürke helyett narancs/bézs).
+ * 2. Tipográfia optimalizálása (szellősebb sorköz, balra igazítás a hosszú szövegekhez).
+ * 3. Kód karbantartás, felesleges központosítás eltávolítása.
+ */
+
 /* clearfix */
 .clearfix-7da63 {
   clear: both;
@@ -5,7 +14,7 @@
 
 /* board */
 .board-b72b1 {
-  border: 2px solid #404040;
+  border: 3px solid var(--board-border); /* Egységesített határvonal a változóval */
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -24,21 +33,22 @@
             user-select: none;
 }
 
-/* white square */
+/* white square (világos mező) - Helyette vidámabb szín */
 .white-1e1d7 {
-  background-color: #fff;
-  color: #31708f;
+  background-color: var(--board-light); /* Új világos szín: pl. #ffe0b2 (világos narancs) */
+  color: var(--board-dark); /* A dáma színének kontrasztja */
 }
 .unicode.w, .unicode.W {
-  color: #fff;
+  color: #fff; /* Világos dáma maradjon fehér az olvashatóság érdekében */
 }
-/* black square */
+
+/* black square (sötét mező) - Helyette vidámabb szín */
 .black-3c85d {
-  background-color: #31708f;
-  color: #fff;
+  background-color: var(--board-dark); /* Új sötét szín: pl. #ff7043 (sötétebb narancs) */
+  color: var(--board-light); /* A dáma színének kontrasztja */
 }
 .unicode.b, .unicode.B {
-  color: #000;
+  color: #1f1f1f; /* Sötét dáma maradjon sötét az olvashatóság érdekében */
 }
 .unicode {
   position: absolute;
@@ -48,11 +58,13 @@
   position: absolute;
   top: -40%;
 }
+
 /* highlighted square */
 .highlight1-32417, .highlight2-9c5d2 {
-  -webkit-box-shadow: inset 0 0 3px 3px #31b0d5;
-  -moz-box-shadow: inset 0 0 3px 3px #31b0d5;
-  box-shadow: inset 0 0 3px 3px #31b0d5;
+  /* Box-shadow helyett Outline az élesebb, tisztább jelöléshez */
+  -webkit-box-shadow: inset 0 0 3px 3px var(--highlight1);
+  -moz-box-shadow: inset 0 0 3px 3px var(--highlight1);
+  box-shadow: inset 0 0 3px 3px var(--highlight1);
 }
 
 /* notation */
@@ -75,7 +87,7 @@
 
 /* Egyedi formázás a szövegre */
 h1, h3 {
-  text-align: center;
+  /* text-align: center; /* A globalis CSS már kezeli */
   font-weight: normal;
 }
 
@@ -95,7 +107,7 @@ img {
   margin-right: auto;
   width: 250px;
   border: 2px solid #000;
-
+  border-radius: 12px; /* Kerekített sarkok a beépített stílus szerint */
 }
 
 #ujoldal{
@@ -134,4 +146,288 @@ img {
   margin-right: auto;
   margin-left: auto;
   border: 1px solid black;
+}
+/* === SZÍNES, GYEREKBARÁT KIEGÉSZÍTÉS — TÁBLA MARAD, HÁTTÉR SZÍNESEBB === */
+
+:root {
+  /* Tábla színek definíciója */
+  --board-light: #ffe0b2;      /* Világos bézs/narancs */
+  --board-dark: #ff7043;       /* Sötét narancs/terrakotta */
+  --board-border: #f5f5f5;     /* Világos keret */
+
+  /* Alap színek */
+  --bg: linear-gradient(135deg, #fff8e1 0%, #e3f2fd 100%); 
+  --text: #1f1f1f;
+  --muted: #5f6368;
+  --accent: #ff7b00;          /* narancsos kiemelés (H1) */
+  --accent2: #0d6efd;         /* kék linkekhez/H2 */
+  --highlight1: #00bfa5;      /* zöld kijelölés */
+  --highlight2: #ff4081;      /* rózsaszín célmező */
+}
+
+body {
+  /* Betűtípus: Comic Neue a játékos hangulat miatt */
+  font-family: "Comic Neue", "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  /* Sorköz növelése a könnyebb olvashatóság érdekében */
+  line-height: 1.8;
+  font-size: clamp(16px, 1.6vw, 18px);
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+}
+
+/* tartalomdoboz fehér háttérrel, kicsit lebegve */
+main, .content, .page {
+  max-width: 72ch;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+/* címek élénkebbek */
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: 1.5em 0 .5em;
+  font-weight: 700;
+  text-align: center; /* Középre igazítás (kivéve, ha speciális class felülírja) */
+}
+h1 { color: var(--accent); font-size: clamp(28px, 3vw, 38px); }
+h2 { color: var(--accent2); font-size: clamp(22px, 2.4vw, 28px); }
+h3 { color: #009688; font-size: clamp(18px, 2vw, 22px); }
+
+/* képek, ábrák */
+img, svg, canvas, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 12px;
+}
+figure { margin: 1.25rem auto; }
+figcaption { text-align: center; color: var(--muted); font-size: .95em; margin-top: .4rem; }
+
+/* tábla kerete kicsit emel */
+.board-b72b1 {
+  border-radius: 16px;
+  border: 3px solid var(--board-border);
+  box-shadow: 0 6px 18px rgba(0,0,0,.1);
+  overflow: hidden;
+  margin: 1.5rem auto;
+}
+
+/* kijelölés */
+.highlight1-32417,
+.square-55d63:focus-visible {
+  outline: 3px solid var(--highlight1);
+  outline-offset: -3px;
+  box-shadow: 0 0 0 4px rgba(0,191,165,.3) inset;
+}
+.highlight2-9c5d2 {
+  outline: 3px solid var(--highlight2);
+  outline-offset: -3px;
+  box-shadow: 0 0 0 4px rgba(255,64,129,.3) inset;
+}
+
+/* mobilbarát wrapper */
+.board-wrapper {
+  max-width: min(92vw, 520px);
+  margin: 1rem auto;
+}
+
+/* linkek és gombok */
+a { color: var(--accent2); text-decoration: none; font-weight: 600; }
+a:hover { color: var(--accent); text-decoration: underline; }
+
+/* tippdoboz */
+.callout {
+  border: 2px solid var(--accent2);
+  background: #e8f0fe;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.callout strong {
+  display: inline-block;
+  color: var(--accent2);
+  margin-bottom: .25rem;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: linear-gradient(135deg, #1a237e 0%, #004d40 100%);
+    --text: #e6edf3;
+    --muted: #9ea7b3;
+    --accent: #ff9800;
+    --accent2: #64b5f6;
+    --highlight1: #00bfa5;
+    --highlight2: #ff80ab;
+
+    /* Tábla színek Dark Mode-hoz is */
+    --board-light: #5d4037;  /* Sötét csoki */
+    --board-dark: #3e2723;   /* Még sötétebb csoki */
+    --board-border: #444;    /* Sötét keret */
+  }
+  body { background: var(--bg); color: var(--text); }
+  .board-b72b1 { border-color: var(--accent); box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+}
+
+/* mozgáscsökkentés */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* nyomtatás */
+@media print {
+  a[href]:after { content: " (" attr(href) ")"; font-size: .9em; color: #666; }
+  .callout, .toc, .no-print { display: none !important; }
+  .board-b72b1 { box-shadow: none; border-color: #000; }
+}
+
+/* === NAVBAR (egyszerű, gyerekbarát) === */
+.navbar {
+  background: linear-gradient(90deg, #ffcc80 0%, #64b5f6 100%);
+  box-shadow: 0 0px 0px rgba(0,0,0,0); /* Árnyék eltávolítása a belső navbarra */
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* bal oldali cím / logo */
+.nav-logo {
+  font-family: "Comic Neue", "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1f1f1f;
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+/* jobb oldali linkek */
+.nav-link {
+  font-family: "Comic Neue", "Segoe UI", sans-serif;
+  font-weight: 600;
+  color: #1f1f1f;
+  text-decoration: none;
+  background: rgba(255,255,255,0.5);
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  transition: background .2s ease, transform .2s ease;
+}
+.nav-link:hover {
+  background: rgba(255,255,255,0.8);
+  transform: scale(1.05);
+}
+.nav-link.active {
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.6);
+}
+
+/* mobilbarát */
+@media (max-width: 600px) {
+  .navbar-inner {
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* === NAVBAR FINOM ÁTMENET A HÁTTÉRBE === */
+.navbar {
+  background: linear-gradient(180deg, #ffcc80 0%, #64b5f6 100%);
+  background-size: 100% 200%;
+  background-position: top;
+  border-bottom: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* finom árnyék / átmenet az oldal elején */
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+  pointer-events: none;
+}
+
+/* hogy ne lógjon rá a tartalomra */
+body {
+  padding-top: 0.5rem;
+}
+/* === SZELLŐS OLVASÓSÁV, BALRA ZÁRT SZÖVEG (tankönyv stílus) === */
+
+/* kényelmes oldal-margók a teljes nézethez */
+body {
+  margin: 0;
+  padding-inline: clamp(12px, 4vw, 48px);
+  /* Sorköz optimalizálva a jobb olvashatóságért (tankönyv!) */
+  line-height: 1.8;
+  font-size: clamp(16px, 1.6vw, 18px);
+  letter-spacing: 0.003em;
+  word-spacing: 0.02em;
+  text-rendering: optimizeLegibility;
+  color: #222;
+}
+
+/* a fő tartalom szélességkorlátja – a szöveg nem fut a széléig */
+:where(main, .content, .page, article, #main, .text, .reading, .wrapper) {
+  max-width: 90ch;
+  margin-inline: auto;
+}
+
+/* bekezdések: balra igazítás a hosszú szöveghez és jobb olvashatóságért */
+p {
+  margin: 1.1em 0;
+  text-align: left;
+  text-justify: auto; /* kikapcsolja a szóközök feszítését */
+}
+
+/* az első sor kis behúzással jobban tagol (könyvszerű) */
+p + p { text-indent: 1.5em; }
+
+/* automatikus elválasztás, ha elérhető */
+@supports (hyphens: auto) {
+  p { hyphens: auto; }
+}
+
+/* képek ne lógjanak ki a szövegsávból */
+:where(main, .content, .page, article, #main, .text, .reading, .wrapper) 
+  img, 
+:where(main, .content, .page, article, #main, .text, .reading, .wrapper) 
+  video, 
+:where(main, .content, .page, article, #main, .text, .reading, .wrapper) 
+  canvas, 
+:where(main, .content, .page, article, #main, .text, .reading, .wrapper) 
+  svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin: 1rem auto;
+}
+
+/* nagyobb kijelzőn kicsit több tér az oldal szélén */
+@media (min-width: 1200px) {
+  body { padding-inline: clamp(24px, 6vw, 72px); }
 }
